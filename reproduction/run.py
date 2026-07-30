@@ -2,6 +2,7 @@ import json
 import os
 import platform
 import resource
+import subprocess
 import time
 from pathlib import Path
 
@@ -12,6 +13,10 @@ def cpu_affinity_count():
     if not hasattr(os, "sched_getaffinity"):
         return None
     return len(os.sched_getaffinity(0))
+
+
+def command_output(command):
+    return subprocess.check_output(command, text=True).strip()
 
 
 def main():
@@ -25,6 +30,8 @@ def main():
     evidence = {
         "suite": "baseline-claim-1",
         "fixed_command": "uv sync --frozen && uv run python -m reproduction.run",
+        "git_sha": command_output(["git", "rev-parse", "HEAD"]),
+        "uv": command_output(["uv", "--version"]),
         "python": platform.python_version(),
         "platform": platform.platform(),
         "logical_cpu_allocation": os.cpu_count(),
@@ -42,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
