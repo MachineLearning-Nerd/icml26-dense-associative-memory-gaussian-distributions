@@ -1,8 +1,13 @@
+import hashlib
+import io
 import json
 import math
+import tarfile
+import urllib.request
 
 import numpy as np
 import torch
+from PIL import Image
 from scipy.linalg import sqrtm
 
 
@@ -15,6 +20,13 @@ TEXT_THRESHOLD = 1e-3
 PLOT_THRESHOLD = 1e-6
 SEEDS = [20260730, 20260731, 20260732]
 BATCH_SIZE = 8
+SOURCE_URL = "https://export.arxiv.org/e-print/2509.23162v1"
+SOURCE_SHA256 = "a88a9b572b0d3c28b62de7f9419885cd3367d25e8b453bf4ffeba36a68f1f6ee"
+FIGURE_NAME = (
+    "retrieval_dynamics_general,N_1000,d_10,"
+    "beta_1,perturb100x.png"
+)
+FIGURE_SHA256 = "58cab4d6ad088d862eb892d5eee30389d77cf23d8434185e9f692b27f3bebd18"
 
 
 def matrix_power(matrix, power):
@@ -133,7 +145,14 @@ def covariance_perturbations(base, directions, target_distance):
     return perturbed, actual_squared.sqrt()
 
 
-def perturb_queries(rng, means, covariances, targets, radius):
+def perturb_queries(
+    rng,
+    means,
+    covariances,
+    targets,
+    radius,
+    direction_law="wishart",
+):
     mean_directions = rng.normal(size=(len(targets), DIMENSION))
     mean_directions /= np.linalg.norm(
         mean_directions, axis=1, keepdims=True
@@ -142,10 +161,16 @@ def perturb_queries(rng, means, covariances, targets, radius):
         mean_directions * (radius / math.sqrt(2))
     )
 
-    factors = rng.normal(
-        size=(len(targets), DIMENSION, DIMENSION)
-    )
-    directions = factors @ factors.transpose(0, 2, 1)
+    if direction_law == "wishart":
+        factors = rng.normal(
+            size=(len(targets), DIMENSION, DIMENSION)
+        )
+        directions = factors @ factors.transpose(0, 2, 1)
+    elif direction_law == "rank_one":
+        factors = rng.normal(size=(len(targets), DIMENSION, 1))
+        directions = factors @ factors.transpose(0, 2, 1)
+    else:
+        raise ValueError(f"unknown direction law: {direction_law}")
     directions /= np.trace(
         directions, axis1=1, axis2=2
     )[:, None, None]
@@ -351,14 +376,119 @@ def independent_checker():
     }
 
 
+def source_figure_audit():
+    request = urllib.request.Request(
+        SOURCE_URL,
+        headers={
+            "User-Agent": (
+                "OpenResearch-Reproduction/1.0 "
+                "(https://github.com/MachineLearning-Nerd/"
+                "icml26-repro-uPHdNikfdo-dense-associative-"
+                "memory-for-gaussian-distributions)"
+            )
+        },
+    )
+    with urllib.request.urlopen(request, timeout=120) as response:
+        source = response.read()
+    source_hash = hashlib.sha256(source).hexdigest()
+    if source_hash != SOURCE_SHA256:
+        raise AssertionError(
+            f"unexpected arXiv v1 source hash: {source_hash}"
+        )
+
+    with tarfile.open(fileobj=io.BytesIO(source), mode="r:*") as archive:
+        members = [
+            member
+            for member in archive.getmembers()
+            if member.name.endswith(FIGURE_NAME)
+        ]
+        if len(members) != 1:
+            raise AssertionError("Figure 8 panel (b) is missing")
+        figure = archive.extractfile(members[0]).read()
+    figure_hash = hashlib.sha256(figure).hexdigest()
+    if figure_hash != FIGURE_SHA256:
+        raise AssertionError(
+            f"unexpected Figure 8 panel hash: {figure_hash}"
+        )
+
+    pixels = np.asarray(Image.open(io.BytesIO(figure)).convert("RGBA"))
+    if pixels.shape != (1764, 2956, 4):
+        raise AssertionError(f"unexpected figure shape: {pixels.shape}")
+
+    calibration_rows = []
+    column = pixels[:, 250, :3]
+    grid_rows = np.flatnonzero(np.all(column == 231, axis=1))
+    for row in grid_rows:
+        if 100 <= row <= 1400 and (
+            not calibration_rows or row > calibration_rows[-1][-1] + 1
+        ):
+            calibration_rows.append([int(row)])
+        elif calibration_rows and row == calibration_rows[-1][-1] + 1:
+            calibration_rows[-1].append(int(row))
+    grid_centers = np.asarray(
+        [np.mean(group) for group in calibration_rows]
+    )
+    grid_values = np.arange(3.0, 0.49, -0.5)
+    if len(grid_centers) != len(grid_values):
+        raise AssertionError(
+            f"could not calibrate y-axis: {grid_centers.tolist()}"
+        )
+    slope, intercept = np.polyfit(grid_values, grid_centers, 1)
+    residual = np.max(
+        np.abs(grid_centers - (slope * grid_values + intercept))
+    )
+
+    blue = (
+        (pixels[:, :, 0] < 40)
+        & (pixels[:, :, 1] < 40)
+        & (pixels[:, :, 2] > 220)
+        & (pixels[:, :, 3] > 200)
+    )
+    x_positions = np.rint(
+        np.linspace(318, 2805, num=6)
+    ).astype(int)
+    curve_rows = []
+    for x_position in x_positions:
+        y, x = np.where(blue)
+        selected = y[np.abs(x - x_position) <= 4]
+        if len(selected) < 20:
+            raise AssertionError(
+                f"missing blue curve at x={x_position}"
+            )
+        curve_rows.append(float(np.median(selected)))
+    digitized = [
+        float((row - intercept) / slope) for row in curve_rows
+    ]
+    return {
+        "source_url": SOURCE_URL,
+        "source_sha256": source_hash,
+        "figure": FIGURE_NAME,
+        "figure_sha256": figure_hash,
+        "figure_shape": list(pixels.shape),
+        "calibration_grid_pixel_rows": grid_centers.tolist(),
+        "calibration_grid_values": grid_values.tolist(),
+        "calibration_maximum_pixel_residual": float(residual),
+        "curve_pixel_rows": curve_rows,
+        "digitized_mean_w2_by_iteration": digitized,
+        "checks": {
+            "axis_calibration": bool(residual < 1.0),
+            "one_step_above_0_1": bool(digitized[1] > 0.1),
+            "five_steps_above_0_05": bool(digitized[5] > 0.05),
+        },
+    }
+
+
 def verify(output_dir):
     torch.set_default_dtype(torch.float64)
     output_dir.mkdir(parents=True, exist_ok=True)
+    figure_audit = source_figure_audit()
     configurations = []
     raw_errors = {}
     invariants = []
     query_radius_errors = []
     uniform_lower_bounds = []
+    multistep_trajectories = []
+    alternative_direction_results = []
 
     for seed in SEEDS:
         rng = np.random.default_rng(seed)
@@ -424,6 +554,114 @@ def verify(output_dir):
                         "one_step": summarize(errors, nearest_rate),
                     }
                 )
+                if beta == 1.0 and multiplier == 100:
+                    trajectory = [
+                        {
+                            "iteration": 0,
+                            "mean_w2_error": float(
+                                torch.mean(actual_radii)
+                            ),
+                        },
+                        {
+                            "iteration": 1,
+                            **summarize(errors, nearest_rate),
+                        },
+                    ]
+                    current_means = updated_means
+                    current_covariances = updated_covariances
+                    for iteration in range(2, 6):
+                        current_means, current_covariances = (
+                            algorithm_1_update(
+                                current_means,
+                                current_covariances,
+                                means,
+                                covariances,
+                                beta,
+                            )
+                        )
+                        current_errors = paired_w2(
+                            current_means,
+                            current_covariances,
+                            target_means,
+                            target_covariances,
+                        )
+                        current_nearest_rate = (
+                            nearest_mean_target_rate(
+                                current_means, means, targets
+                            )
+                        )
+                        trajectory.append(
+                            {
+                                "iteration": iteration,
+                                **summarize(
+                                    current_errors,
+                                    current_nearest_rate,
+                                ),
+                            }
+                        )
+                    multistep_trajectories.append(
+                        {
+                            "seed": seed,
+                            "beta": beta,
+                            "radius_multiplier": multiplier,
+                            "trajectory": trajectory,
+                        }
+                    )
+
+        rank_one_rng = np.random.default_rng(seed + 6_000)
+        rank_one_means, rank_one_covariances, rank_one_radii = (
+            perturb_queries(
+                rank_one_rng,
+                means,
+                covariances,
+                targets,
+                100 / math.sqrt(COUNT),
+                direction_law="rank_one",
+            )
+        )
+        query_radius_errors.append(
+            float(
+                torch.max(
+                    torch.abs(
+                        rank_one_radii - 100 / math.sqrt(COUNT)
+                    )
+                )
+            )
+        )
+        rank_one_updated_means, rank_one_updated_covariances = (
+            algorithm_1_update(
+                rank_one_means,
+                rank_one_covariances,
+                means,
+                covariances,
+                1.0,
+            )
+        )
+        rank_one_errors = paired_w2(
+            rank_one_updated_means,
+            rank_one_updated_covariances,
+            target_means,
+            target_covariances,
+        )
+        alternative_direction_results.append(
+            {
+                "seed": seed,
+                "direction_law": "rank-one PSD",
+                "beta": 1.0,
+                "radius_multiplier": 100,
+                "initial_mean_w2_error": float(
+                    torch.mean(rank_one_radii)
+                ),
+                "one_step": summarize(
+                    rank_one_errors,
+                    nearest_mean_target_rate(
+                        rank_one_updated_means,
+                        means,
+                        targets,
+                    ),
+                ),
+            }
+        )
 
     checker = independent_checker()
     positive = [
@@ -445,6 +683,18 @@ def verify(output_dir):
         ),
         "rejected": float(np.min(flat_uniform)) > TEXT_THRESHOLD,
     }
+    large_radius_positive = [
+        row["one_step"]
+        for row in configurations
+        if row["beta"] == 1.0 and row["radius_multiplier"] == 100
+    ]
+    final_large_radius = [
+        row["trajectory"][-1]
+        for row in multistep_trajectories
+    ]
+    alternative_positive = [
+        row["one_step"] for row in alternative_direction_results
+    ]
     checks = {
         "exact_scale": all(
             row["N"] == COUNT
@@ -464,11 +714,25 @@ def verify(output_dir):
         )
         > 1e-6,
         "query_radii": max(query_radius_errors) < 1e-9,
-        "beta_1_one_step": max(
-            row["mean_95_ci"][1] for row in positive
+        "beta_1_one_step_claim_rejected": min(
+            row["mean_95_ci"][0] for row in positive
         )
-        <= TEXT_THRESHOLD
-        and min(row["nearest_target_rate"] for row in positive) >= 0.99,
+        > TEXT_THRESHOLD,
+        "large_radius_one_step_claim_rejected": min(
+            row["mean_95_ci"][0] for row in large_radius_positive
+        )
+        > 0.1,
+        "large_radius_five_step_claim_rejected": min(
+            row["mean_95_ci"][0] for row in final_large_radius
+        )
+        > 0.05,
+        "alternative_psd_direction_rejects_one_step": min(
+            row["mean_95_ci"][0] for row in alternative_positive
+        )
+        > 0.1,
+        "source_figure_rejects_one_step": all(
+            figure_audit["checks"].values()
+        ),
         "beta_0_1_non_convergence": max(
             row["below_1e-3_rate"] for row in negative
         )
@@ -478,7 +742,7 @@ def verify(output_dir):
     }
     result = {
         "claim_id": 6,
-        "verdict": "VERIFIED" if all(checks.values()) else "BLOCKED",
+        "verdict": "FALSIFIED" if all(checks.values()) else "BLOCKED",
         "parameters": {
             "N": COUNT,
             "d": DIMENSION,
@@ -486,7 +750,7 @@ def verify(output_dir):
             "sphere_radius": math.sqrt(2 * DIMENSION),
             "betas": BETAS,
             "radius_multipliers": RADIUS_MULTIPLIERS,
-            "updates": 1,
+            "updates": 5,
             "paper_text_threshold": TEXT_THRESHOLD,
             "paper_plot_threshold": PLOT_THRESHOLD,
             "seeds": SEEDS,
@@ -495,7 +759,10 @@ def verify(output_dir):
         "pattern_invariants": invariants,
         "maximum_query_radius_error": max(query_radius_errors),
         "configurations": configurations,
+        "multistep_large_radius_trajectories": multistep_trajectories,
+        "alternative_psd_direction": alternative_direction_results,
         "raw_one_step_errors": raw_errors,
+        "source_figure_audit": figure_audit,
         "independent_checker": checker,
         "negative_control": negative_control,
         "checks": checks,
@@ -503,6 +770,6 @@ def verify(output_dir):
     (output_dir / "result.json").write_text(
         json.dumps(result, indent=2) + "\n"
     )
-    if result["verdict"] != "VERIFIED":
+    if result["verdict"] != "FALSIFIED":
         raise SystemExit(json.dumps(result, indent=2))
     return result
