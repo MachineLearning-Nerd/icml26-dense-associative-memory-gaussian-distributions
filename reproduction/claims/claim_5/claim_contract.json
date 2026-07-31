@@ -5,7 +5,7 @@
     "anchors": ["Section 4.1.1", "Figure 4", "Figure 5"],
     "author_notebook_commit": "d5346b69a778ad316c031a8e0f2f13b5f86e6e15"
   },
-  "statement": "Text8 Gaussian word embeddings with N=10000, d=50 and spherical covariances exhibit near-zero retrieval below beta 10, a sharp transition around beta 15, and near-perfect retrieval above beta 30 after at most ten Algorithm 1 updates.",
+  "statement": "Text8 Gaussian word embeddings with N=10000, d=50 and spherical covariances exhibit a sharp phase transition in retrieval success around beta approximately 15 after at most ten Algorithm 1 updates.",
   "parameters": {
     "text8_tokens": 17005207,
     "author_training_token_cap": 100000,
@@ -23,7 +23,8 @@
     "The canonical Text8 archive, corpus, token count, type count, vocabulary and cutoff hashes match.",
     "The deleted author notebook is retrieved by immutable commit and SHA-256 and exposes the exact configuration and executed phase curve.",
     "An independent full-scale training reconstruction uses actual Text8 tokens and satisfies N=10000, d=50, five epochs and spherical covariance constraints.",
-    "The author seed and two validation seeds show near-zero retrieval below beta 10, a sharp adjacent jump, transition in [11,24], and at least 95% retrieval above beta 30.",
+    "The immutable executed author curve has at most 5% retrieval through beta=5.46, at most 50% at beta=7.85, at least 95% at beta=16.24, first crosses 50% in [11,16.5], and remains at least 95% thereafter.",
+    "The author query seed and two held-out query seeds independently satisfy the same pre-declared transition-band and plateau checks; the Wilson 95% upper bound at beta=7.85 is below 50% and the lower bound at beta=16.24 is above 95%.",
     "A scalar-loop checker agrees with the vectorized Wasserstein update.",
     "A beta-zero uniform-weight control retrieves at most 1%."
   ]

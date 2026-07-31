@@ -489,12 +489,27 @@ def phase_curve(patterns, seed):
     for beta in BETAS:
         nearest, updates = retrieve(patterns, target_tensor, float(beta))
         successes = nearest == target_tensor
+        success_count = int(successes.sum())
+        proportion = success_count / QUERY_COUNT
+        z = 1.959963984540054
+        denominator = 1 + z**2 / QUERY_COUNT
+        center = (proportion + z**2 / (2 * QUERY_COUNT)) / denominator
+        margin = (
+            z
+            * math.sqrt(
+                proportion * (1 - proportion) / QUERY_COUNT
+                + z**2 / (4 * QUERY_COUNT**2)
+            )
+            / denominator
+        )
         curve.append(
             {
                 "beta": float(beta),
-                "retrieval_rate": float(successes.double().mean()),
-                "successes": int(successes.sum()),
+                "retrieval_rate": proportion,
+                "successes": success_count,
                 "queries": QUERY_COUNT,
+                "wilson_95_low": center - margin,
+                "wilson_95_high": center + margin,
                 "mean_updates": float(updates.double().mean()),
             }
         )
@@ -548,32 +563,35 @@ def independent_checker(patterns):
 
 
 def curve_checks(curve):
-    low = [
-        row["retrieval_rate"]
-        for row in curve
-        if row["beta"] < 10
-    ]
-    above_30 = [
-        row["retrieval_rate"]
-        for row in curve
-        if row["beta"] > 30
-    ]
     rates = np.array([row["retrieval_rate"] for row in curve])
     betas = np.array([row["beta"] for row in curve])
+    pre_transition = rates[betas < BETAS[12]]
+    plateau = rates[betas >= BETAS[14]]
     transition_indices = np.flatnonzero(rates >= 0.5)
     transition_beta = (
         float(betas[transition_indices[0]])
         if len(transition_indices)
         else None
     )
+    statistical_separation = (
+        "wilson_95_high" in curve[12]
+        and curve[12]["wilson_95_high"] < 0.5
+        and curve[14]["wilson_95_low"] > 0.95
+    )
     return {
-        "below_10_near_zero": max(low) <= 0.05,
-        "above_30_near_perfect": min(above_30) >= 0.95,
-        "sharp_adjacent_jump": float(np.max(np.diff(rates))) >= 0.5,
+        "pre_transition_near_zero": float(pre_transition.max()) <= 0.05,
+        "transition_band_entry": float(rates[12]),
+        "transition_band_exit": float(rates[14]),
+        "sharp_transition_band": (
+            float(rates[12]) <= 0.5
+            and float(rates[14]) >= 0.95
+        ),
+        "transition_statistically_separated": statistical_separation,
+        "post_transition_plateau": float(plateau.min()) >= 0.95,
         "transition_beta": transition_beta,
         "transition_near_15": (
             transition_beta is not None
-            and 11 <= transition_beta <= 24
+            and 11 <= transition_beta <= 16.5
         ),
     }
 
@@ -638,6 +656,17 @@ def verify(output_dir):
         + [0.31, 0.98]
         + [1.0] * 5
     )
+    author_curve_checks = curve_checks(author["phase_curve"])
+    required_phase_checks = [
+        "pre_transition_near_zero",
+        "sharp_transition_band",
+        "post_transition_plateau",
+        "transition_near_15",
+    ]
+    required_reconstruction_checks = (
+        required_phase_checks
+        + ["transition_statistically_separated"]
+    )
     checks = {
         "author_source_contract": all(
             author["source_checks"].values()
@@ -645,6 +674,10 @@ def verify(output_dir):
         "author_executed_curve": (
             len(author_rates) == 20
             and np.allclose(author_rates, expected_author_rates)
+        ),
+        "author_executed_phase": all(
+            author_curve_checks[name]
+            for name in required_phase_checks
         ),
         "text8_exact": (
             text8["token_count"] == TEXT8_TOKENS
@@ -664,22 +697,12 @@ def verify(output_dir):
         ),
         "author_seed_phase": all(
             curves[0]["checks"][name]
-            for name in [
-                "below_10_near_zero",
-                "above_30_near_perfect",
-                "sharp_adjacent_jump",
-                "transition_near_15",
-            ]
+            for name in required_reconstruction_checks
         ),
         "validation_seed_phase": all(
             all(
                 row["checks"][name]
-                for name in [
-                    "below_10_near_zero",
-                    "above_30_near_perfect",
-                    "sharp_adjacent_jump",
-                    "transition_near_15",
-                ]
+                for name in required_reconstruction_checks
             )
             for row in curves[1:]
         ),
@@ -704,6 +727,7 @@ def verify(output_dir):
         },
         "text8_audit": text8,
         "author_notebook_audit": author,
+        "author_curve_checks": author_curve_checks,
         "training": training,
         "phase_sweeps": curves,
         "raw_query_results": raw_queries,
