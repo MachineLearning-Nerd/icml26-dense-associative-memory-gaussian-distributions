@@ -1,0 +1,36 @@
+{
+  "claim_id": 1,
+  "verdict": "VERIFIED",
+  "beta": 8.0,
+  "seed": 20260730,
+  "implemented_energy": 17.066010887725504,
+  "direct_energy": 17.066010887725504,
+  "analytic_gradient": [
+    -7.113780731352815,
+    1.081066567733659
+  ],
+  "finite_difference_gradient": [
+    -7.113780731415885,
+    1.0810665678206988
+  ],
+  "gradient_max_abs_error": 8.703970877377287e-11,
+  "stored_energies": [
+    -1.7763568394002505e-15,
+    -8.881784197001252e-16,
+    -5.329070518200751e-15,
+    8.881784197001252e-16,
+    -2.220446049250313e-15
+  ],
+  "centroid_energy": 8.142790314124024,
+  "negative_control": {
+    "name": "sign-reversed gradient",
+    "max_abs_error": 14.227561462768701,
+    "rejected": true
+  },
+  "checks": {
+    "formula_matches": true,
+    "gradient_matches": true,
+    "stored_below_centroid": true,
+    "negative_control_rejected": true
+  }
+}

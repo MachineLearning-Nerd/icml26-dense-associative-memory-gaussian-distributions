@@ -1,0 +1,17 @@
+{
+  "run_id": "4b824e0c-a9f3-4ace-b39c-706057da9992",
+  "git_sha": "3612f94158c9da860d7b09733266994176e098db",
+  "backend": "Hugging Face",
+  "flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
+  "estimated_required_cores": 1,
+  "selection_reason": "First environment sync had uncertain runtime.",
+  "actual_logical_cpu_allocation": 64,
+  "actual_affinity_cpu_allocation": 64,
+  "numerical_thread_limit": 1,
+  "verifier_runtime_seconds": 0.09670430584810674,
+  "job_duration_seconds": 42,
+  "max_rss_kib": 39264,
+  "uv": "uv 0.11.32 (x86_64-unknown-linux-musl)",
+  "python": "3.12.13"
+}

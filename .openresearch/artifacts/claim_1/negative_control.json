@@ -1,0 +1,7 @@
+{
+  "control": "Replace the analytic energy gradient by its negative.",
+  "expected": "The independent finite-difference checker rejects it.",
+  "max_absolute_error": 14.227561462768701,
+  "minimum_rejection_error": 0.1,
+  "rejected": true
+}

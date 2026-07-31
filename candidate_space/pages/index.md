@@ -7,5 +7,10 @@ unchanged in the release candidate.
 
 | Claim | Current page | Status |
 | --- | --- | --- |
-| 1 | [Wasserstein LSE formulation](current/claim-1.md) | pending baseline run |
+| 1 | [Wasserstein LSE formulation](current/claim-1.md) | VERIFIED |
 
+## Visibility matrix
+
+| Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | `pages/current/claim-1.md` | yes, excerpt and source path | yes | yes | finite difference | sign reversal rejected | yes | VERIFIED |

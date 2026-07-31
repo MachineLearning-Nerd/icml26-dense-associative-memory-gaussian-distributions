@@ -1,0 +1,14 @@
+{
+  "method": "central finite difference, step=1e-5",
+  "analytic_gradient": [
+    -7.113780731352815,
+    1.081066567733659
+  ],
+  "independent_gradient": [
+    -7.113780731415885,
+    1.0810665678206988
+  ],
+  "max_absolute_error": 8.703970877377287e-11,
+  "tolerance": 1e-6,
+  "passed": true
+}
