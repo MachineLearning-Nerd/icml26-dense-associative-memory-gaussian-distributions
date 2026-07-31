@@ -1,0 +1,6 @@
+{
+  "name": "beta=0 uniform-weight mean lower bound",
+  "minimum_w2_lower_bound": 3.074579954711402,
+  "below_1e-3_rate_upper_bound": 0.0,
+  "rejected": true
+}

@@ -1,0 +1,14 @@
+{
+  "run_id": "eb085eac-056a-4005-add9-816058a8eab0",
+  "git_sha": "11f0d0dafdbf612f997d383fb6e92345f334df20",
+  "backend": "hf",
+  "selected_compute_flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
+  "estimated_required_cores": 64,
+  "logical_cpu_allocation": 64,
+  "affinity_cpu_allocation": 64,
+  "thread_limit": 64,
+  "verifier_runtime_seconds": 3389.0788763600867,
+  "total_job_runtime": "57m25s",
+  "max_rss_kib": 1543072
+}

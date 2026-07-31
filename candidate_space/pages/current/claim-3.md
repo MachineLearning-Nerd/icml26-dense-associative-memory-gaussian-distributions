@@ -32,7 +32,7 @@ The proof certificate derives the claimed log-error rate
 `d=100,140,180,220,260`, with `N=13,69,354,1825,9390`, five seeds,
 and up to 64 distinct queries per memory. All 1,345 queries were placed
 at exactly `0.9/sqrt(beta N)`, preserving the commuting covariance and
-spectral assumptions.
+spectral assumptions. The seeds are `20260730` through `20260734`.
 
 | Quantity | Observed |
 | --- | ---: |
@@ -53,19 +53,28 @@ The fixed command is:
 uv sync --frozen && uv run python -m reproduction.run
 ```
 
+The executable [verifier](../../evidence/claim_3/verifier.py),
+[contract](../../evidence/claim_3/claim_contract.json), and
+[source audit](../../evidence/claim_3/source_audit.md) are visible here.
+The cumulative runner exits nonzero if this verifier rejects any
+predicate.
+
 Downloadable evidence:
 
-- [raw result](../../../.openresearch/artifacts/claim_3/raw/result.json)
-- [dimension sweep](../../../.openresearch/artifacts/claim_3/raw/dimension_sweep.csv)
-- [proof certificate](../../../.openresearch/artifacts/claim_3/proof_certificate.json)
-- [independent checker](../../../.openresearch/artifacts/claim_3/independent_checker.json)
-- [negative control](../../../.openresearch/artifacts/claim_3/negative_control.json)
-- [runtime](../../../.openresearch/artifacts/claim_3/runtime.json)
+- [raw result](../../evidence/claim_3/raw/result.json)
+- [dimension sweep](../../evidence/claim_3/raw/dimension_sweep.csv)
+- [proof certificate](../../evidence/claim_3/proof_certificate.json)
+- [independent checker](../../evidence/claim_3/independent_checker.json)
+- [negative control](../../evidence/claim_3/negative_control.json)
+- [runtime](../../evidence/claim_3/runtime.json)
+- [evaluator guide](../../evidence/claim_3/EVAL.md)
 
 Run `3bd0e1d9-ab67-44d1-801d-022c6d3df992` used HF
-`cpu-upgrade`: estimated 64 cores; actual allocation 64 logical and
-affinity CPUs; thread limit 64; verifier runtime `470.3710075530689 s`;
-total job runtime `523 s`; peak RSS `304,704 KiB`.
+`cpu-upgrade`, provisioned as 8 vCPUs and 32 GB. The container exposed
+64 logical/affinity CPUs and used a 64-thread limit. Verifier runtime was
+`470.3710075530689 s`; total job runtime `523 s`; peak RSS
+`304,704 KiB`. Git SHA:
+`b61eda5b9f2aa1a4663eaee4792e58745ca42ebf`.
 
 ## Limitations
 

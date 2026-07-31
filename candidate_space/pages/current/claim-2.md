@@ -26,6 +26,12 @@ The fixed command is:
 uv sync --frozen && uv run python -m reproduction.run
 ```
 
+The executable [verifier](../../evidence/claim_2/verifier.py),
+[contract](../../evidence/claim_2/claim_contract.json), and
+[source audit](../../evidence/claim_2/source_audit.md) are visible here.
+The cumulative runner exits nonzero if this verifier rejects any
+predicate.
+
 ## Proof-level result
 
 The independent certificate used `p=0.1`, `lambda_min=1`,
@@ -39,7 +45,8 @@ alpha^2/16 = 0.040943462642501954,
 
 and found a conservative numerical `d0=364`. Tail monotonicity checks
 show that the certified sufficient inequalities persist for all larger
-dimensions.
+dimensions. All sweeps use deterministic seeds `20260730` through
+`20260734`.
 
 The paper HTML has two documented transcription inconsistencies: one
 proof sentence writes `/8` where the theorem and union-bound algebra
@@ -73,18 +80,21 @@ its minimum mean distance is zero.
 
 Downloadable evidence:
 
-- [raw result](../../../.openresearch/artifacts/claim_2/raw/result.json)
-- [theorem-sized sweep](../../../.openresearch/artifacts/claim_2/raw/theorem_sweep.csv)
-- [independent calibration](../../../.openresearch/artifacts/claim_2/raw/calibration_sweep.csv)
-- [proof certificate](../../../.openresearch/artifacts/claim_2/proof_certificate.json)
-- [independent checker](../../../.openresearch/artifacts/claim_2/independent_checker.json)
-- [negative control](../../../.openresearch/artifacts/claim_2/negative_control.json)
-- [runtime](../../../.openresearch/artifacts/claim_2/runtime.json)
+- [raw result](../../evidence/claim_2/raw/result.json)
+- [theorem-sized sweep](../../evidence/claim_2/raw/theorem_sweep.csv)
+- [independent calibration](../../evidence/claim_2/raw/calibration_sweep.csv)
+- [proof certificate](../../evidence/claim_2/proof_certificate.json)
+- [independent checker](../../evidence/claim_2/independent_checker.json)
+- [negative control](../../evidence/claim_2/negative_control.json)
+- [runtime](../../evidence/claim_2/runtime.json)
+- [evaluator guide](../../evidence/claim_2/EVAL.md)
 
 Run `a2f67dbf-8aaf-4e90-9d38-4b7a1d51c50d` used HF
-`cpu-upgrade`: estimated 64 cores; actual allocation 64 logical and
-affinity CPUs; thread limit 64; verifier runtime `385.97424927703105 s`;
-total job runtime `433 s`; peak RSS `274,332 KiB`.
+`cpu-upgrade`, provisioned as 8 vCPUs and 32 GB. The container exposed
+64 logical/affinity CPUs and used a 64-thread limit. Verifier runtime was
+`385.97424927703105 s`; total job runtime `433 s`; peak RSS
+`274,332 KiB`. Git SHA:
+`9fa3d8d77b71276c8a78450038ec9e0da8c2ec7b`.
 
 ## Limitations
 

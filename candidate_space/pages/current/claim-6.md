@@ -21,7 +21,8 @@ paper's own figure must independently contradict the prose.
 
 ## Result
 
-All predicates passed across three deterministic seeds.
+All predicates passed across deterministic seeds `20260730`,
+`20260731`, and `20260732`.
 
 | condition | seed-level mean W2 after one update |
 | --- | --- |
@@ -55,23 +56,27 @@ The fixed command is:
 uv sync --frozen && uv run python -m reproduction.run
 ```
 
+The cumulative runner exits nonzero unless this assumption-satisfying
+counterexample and every supporting predicate pass.
+
 Downloadable evidence:
 
-- [verifier source](../../../.openresearch/artifacts/claim_6/verifier.py)
-- [raw result](../../../.openresearch/artifacts/claim_6/raw/result.json)
-- [trajectory CSV](../../../.openresearch/artifacts/claim_6/raw/trajectories.csv)
-- [claim contract](../../../.openresearch/artifacts/claim_6/claim_contract.json)
-- [source audit](../../../.openresearch/artifacts/claim_6/source_audit.md)
-- [paper-figure audit](../../../.openresearch/artifacts/claim_6/source_figure_audit.json)
-- [independent checker](../../../.openresearch/artifacts/claim_6/independent_checker.json)
-- [negative control](../../../.openresearch/artifacts/claim_6/negative_control.json)
-- [runtime](../../../.openresearch/artifacts/claim_6/runtime.json)
-- [evaluator guide](../../../.openresearch/artifacts/claim_6/EVAL.md)
+- [verifier source](../../evidence/claim_6/verifier.py)
+- [raw result](../../evidence/claim_6/raw/result.json)
+- [trajectory CSV](../../evidence/claim_6/raw/trajectories.csv)
+- [claim contract](../../evidence/claim_6/claim_contract.json)
+- [source audit](../../evidence/claim_6/source_audit.md)
+- [paper-figure audit](../../evidence/claim_6/source_figure_audit.json)
+- [independent checker](../../evidence/claim_6/independent_checker.json)
+- [negative control](../../evidence/claim_6/negative_control.json)
+- [runtime](../../evidence/claim_6/runtime.json)
+- [evaluator guide](../../evidence/claim_6/EVAL.md)
 
 Run `eb085eac-056a-4005-add9-816058a8eab0` at Git SHA
 `11f0d0dafdbf612f997d383fb6e92345f334df20` on HF
-`cpu-upgrade`: estimated/actual 64 cores; verifier runtime
-`3389.079 s`; total job `57m25s`; peak RSS `1,543,072 KiB`.
+`cpu-upgrade`, provisioned as 8 vCPUs and 32 GB. The container exposed
+64 logical/affinity CPUs and used a 64-thread limit. Verifier runtime
+was `3389.079 s`; total job `57m25s`; peak RSS `1,543,072 KiB`.
 
 ## Limitations
 

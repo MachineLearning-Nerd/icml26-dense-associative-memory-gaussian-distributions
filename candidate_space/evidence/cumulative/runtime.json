@@ -1,0 +1,21 @@
+{
+  "run_id": "52ab44ba-6855-4d43-a90c-33b50fdf0b79",
+  "git_sha": "856fea8914ea9289e565c5e7e58ce3d55936a377",
+  "fixed_command": "uv sync --frozen && uv run python -m reproduction.run",
+  "backend": "Hugging Face",
+  "selected_compute_flavor": "cpu-upgrade",
+  "provisioned_flavor_vcpus": 8,
+  "provisioned_memory_gb": 32,
+  "container_logical_cpu_count": 64,
+  "container_affinity_cpu_count": 64,
+  "numerical_thread_limit": 64,
+  "pre_run_estimated_vcpus": 8,
+  "suite_runtime_seconds": 945.2080230978318,
+  "total_job_runtime_seconds": 984,
+  "max_rss_kib": 1539864,
+  "hourly_price_usd": 0.03,
+  "estimated_successful_run_cost_usd": 0.0082,
+  "failed_timeout_run_id": "636b8aa1-094c-4c63-a222-969eaf5894d6",
+  "failed_timeout_seconds": 14700,
+  "estimated_failed_timeout_cost_usd": 0.1225
+}

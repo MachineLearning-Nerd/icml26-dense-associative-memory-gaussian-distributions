@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "title": "Gaussian Dense Associative Memory (uPHdNikfdo)",
+  "emoji": "🎯",
+  "space_id": "DineshAI/uPHdNikfdo",
+  "paper": "2509.23162v1",
+  "tags": [
+    "icml2026-repro",
+    "paper-uPHdNikfdo"
+  ],
+  "updated_at": "2026-07-31T12:51:14+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Current verification",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "current-report",
+        "title": "Current illustrated report",
+        "file": "pages/current/report.md",
+        "children": []
+      },
+      {
+        "slug": "claim-1",
+        "title": "Claim 1 — VERIFIED",
+        "file": "pages/current/claim-1.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2",
+        "title": "Claim 2 — VERIFIED",
+        "file": "pages/current/claim-2.md",
+        "children": []
+      },
+      {
+        "slug": "claim-3",
+        "title": "Claim 3 — VERIFIED",
+        "file": "pages/current/claim-3.md",
+        "children": []
+      },
+      {
+        "slug": "claim-4",
+        "title": "Claim 4 — VERIFIED",
+        "file": "pages/current/claim-4.md",
+        "children": []
+      },
+      {
+        "slug": "claim-5",
+        "title": "Claim 5 — VERIFIED",
+        "file": "pages/current/claim-5.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6",
+        "title": "Claim 6 — FALSIFIED",
+        "file": "pages/current/claim-6.md",
+        "children": []
+      },
+      {
+        "slug": "version-audit",
+        "title": "Paper version audit",
+        "file": "pages/current/version-audit.md",
+        "children": []
+      },
+      {
+        "slug": "historical-overview",
+        "title": "Historical rejected baseline",
+        "file": "pages/overview/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 1200,
+  "revision": "856fea8914ea9289e565c5e7e58ce3d55936a377"
+}

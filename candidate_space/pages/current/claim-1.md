@@ -26,14 +26,18 @@ The fixed command is:
 uv sync --frozen && uv run python -m reproduction.run
 ```
 
-The executable verifier is
-`reproduction/claims/claim_1/verifier.py`; the machine-readable contract
-is `reproduction/claims/claim_1/claim_contract.json`.
+The executable [verifier](../../evidence/claim_1/verifier.py) and
+[machine-readable contract](../../evidence/claim_1/claim_contract.json)
+are directly available. The cumulative runner exits nonzero if this
+verifier rejects any predicate.
+[The source audit](../../evidence/claim_1/source_audit.md) records the
+paper anchor and quantifiers.
 
 ## Raw result
 
 Run `4b824e0c-a9f3-4ace-b39c-706057da9992`, Git SHA
-`3612f94158c9da860d7b09733266994176e098db`:
+`3612f94158c9da860d7b09733266994176e098db`, deterministic seed
+`20260730`:
 
 | Check | Observed | Threshold | Result |
 | --- | ---: | ---: | --- |
@@ -51,16 +55,17 @@ Independent finite-difference gradient:
 
 Downloadable evidence:
 
-- [raw result](../../../.openresearch/artifacts/claim_1/raw/result.json)
-- [independent checker](../../../.openresearch/artifacts/claim_1/independent_checker.json)
-- [negative control](../../../.openresearch/artifacts/claim_1/negative_control.json)
-- [runtime and CPU record](../../../.openresearch/artifacts/claim_1/runtime.json)
-- [exact command](../../../.openresearch/artifacts/claim_1/exact_command.txt)
+- [raw result](../../evidence/claim_1/raw/result.json)
+- [independent checker](../../evidence/claim_1/independent_checker.json)
+- [negative control](../../evidence/claim_1/negative_control.json)
+- [runtime and CPU record](../../evidence/claim_1/runtime.json)
+- [exact command](../../evidence/claim_1/exact_command.txt)
+- [evaluator guide](../../evidence/claim_1/EVAL.md)
 
-HF `cpu-upgrade` exposed 64 logical/affinity CPUs; the verifier imposed a
-one-thread numerical cap. Verifier runtime was `0.0967043 s`; total job
-duration, including environment setup, was `42 s`; peak RSS was
-`39,264 KiB`.
+HF `cpu-upgrade` is provisioned as 8 vCPUs and 32 GB; the container
+exposed 64 logical/affinity CPUs. The verifier imposed a one-thread
+numerical cap. Verifier runtime was `0.0967043 s`; total job duration,
+including environment setup, was `42 s`; peak RSS was `39,264 KiB`.
 
 ## Limitations
 

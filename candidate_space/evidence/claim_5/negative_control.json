@@ -1,0 +1,7 @@
+{
+  "name": "beta=0 uniform-weight retrieval",
+  "retrieval_rate": 0.0,
+  "rejected": true,
+  "query_radius": 0.0025819888974716113,
+  "query_count": 100
+}

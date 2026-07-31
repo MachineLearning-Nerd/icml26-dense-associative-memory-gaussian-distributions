@@ -1,0 +1,6 @@
+{
+  "name": "sign-reversed Gibbs logits",
+  "cases": 25,
+  "theorem_bound_violations": 25,
+  "rejected": true
+}

@@ -1,0 +1,15 @@
+{
+  "git_sha": "b61eda5b9f2aa1a4663eaee4792e58745ca42ebf",
+  "uv": "uv 0.11.32 (x86_64-unknown-linux-musl)",
+  "python": "3.12.13",
+  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.41",
+  "logical_cpu_allocation": 64,
+  "affinity_cpu_allocation": 64,
+  "estimated_required_cores": 64,
+  "selected_compute_flavor": "cpu-upgrade",
+  "thread_limit": 64,
+  "runtime_seconds": 470.3710075530689,
+  "max_rss_kib": 304704,
+  "total_job_seconds": 523,
+  "run_id": "3bd0e1d9-ab67-44d1-801d-022c6d3df992"
+}

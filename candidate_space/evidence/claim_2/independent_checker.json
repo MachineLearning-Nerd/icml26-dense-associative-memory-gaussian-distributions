@@ -1,0 +1,130 @@
+{
+  "independent_l2_audits": [
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.488138684352009,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.934820127633458,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.567339564216354,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.277564924562,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.228973971780079,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.398460873214191,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.939406329961798,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.487961097191032,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.197534317923157,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 10.861712201271644,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.171822208818696,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.848076735003417,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.63111150597291,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.364533042341066,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.011615044210316,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.375161569799275,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.812023168186556,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.523406272498335,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.343997799983242,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.225216179414701,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.0341059584373795,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.7454030262332765,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.510819651090685,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.187511334586816,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.286850454806483,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

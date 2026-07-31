@@ -1,0 +1,13 @@
+{
+  "alpha": 0.8093796403913501,
+  "capacity_log_rate": 0.040943462642501954,
+  "claimed_log_error_rate": -0.020471731321250977,
+  "fitted_bound_rate": -0.020471731321250995,
+  "checks": {
+    "capacity_rate_identity": true,
+    "error_rate_identity": true,
+    "floor_bound_eventual": true,
+    "asymptotic_rate": true
+  },
+  "passed": true
+}

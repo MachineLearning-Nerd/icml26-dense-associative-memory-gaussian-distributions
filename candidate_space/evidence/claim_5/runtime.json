@@ -1,0 +1,21 @@
+{
+  "run_id": "52ab44ba-6855-4d43-a90c-33b50fdf0b79",
+  "git_sha": "856fea8914ea9289e565c5e7e58ce3d55936a377",
+  "backend": "Hugging Face",
+  "selected_compute_flavor": "cpu-upgrade",
+  "provisioned_flavor_vcpus": 8,
+  "provisioned_memory_gb": 32,
+  "container_logical_cpu_count": 64,
+  "container_affinity_cpu_count": 64,
+  "numerical_thread_limit": 64,
+  "pre_run_estimated_vcpus": 8,
+  "suite_runtime_seconds": 945.2080230978318,
+  "total_job_runtime_seconds": 984,
+  "max_rss_kib": 1539864,
+  "hourly_price_usd": 0.03,
+  "estimated_successful_run_cost_usd": 0.0082,
+  "image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
+  "uv": "uv 0.11.32 (x86_64-unknown-linux-musl)",
+  "python": "3.12.13",
+  "note": "HF documents cpu-upgrade as 8 vCPUs. The container exposed 64 logical and affinity CPUs; these are recorded separately and are not described as provisioned vCPUs."
+}

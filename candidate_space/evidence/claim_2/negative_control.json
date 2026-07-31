@@ -1,0 +1,6 @@
+{
+  "name": "duplicate one mean and covariance",
+  "minimum_mean_distance_squared": 0.0,
+  "required_mean_distance_squared_positive": true,
+  "rejected": true
+}

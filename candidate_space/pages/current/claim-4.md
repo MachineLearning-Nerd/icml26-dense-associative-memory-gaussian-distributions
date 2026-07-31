@@ -26,7 +26,8 @@ Wasserstein distance is split equally.
 ## Result
 
 The verifier used the exact paper scale with three deterministic
-seeds. Each table cell contains 7,500 queries.
+seeds (`20260730`, `20260731`, `20260732`). Each table cell contains
+7,500 queries.
 
 | beta | radius | seed-level retrieval after one update | mean W2 error after three updates |
 | ---: | ---: | ---: | ---: |
@@ -46,22 +47,27 @@ The fixed command is:
 uv sync --frozen && uv run python -m reproduction.run
 ```
 
+The cumulative runner exits nonzero if this verifier rejects any
+predicate.
+
 Downloadable evidence:
 
-- [verifier source](../../../.openresearch/artifacts/claim_4/verifier.py)
-- [raw per-query result](../../../.openresearch/artifacts/claim_4/raw/result.json)
-- [trajectory CSV](../../../.openresearch/artifacts/claim_4/raw/trajectories.csv)
-- [claim contract](../../../.openresearch/artifacts/claim_4/claim_contract.json)
-- [source audit](../../../.openresearch/artifacts/claim_4/source_audit.md)
-- [independent checker](../../../.openresearch/artifacts/claim_4/independent_checker.json)
-- [negative control](../../../.openresearch/artifacts/claim_4/negative_control.json)
-- [runtime](../../../.openresearch/artifacts/claim_4/runtime.json)
+- [verifier source](../../evidence/claim_4/verifier.py)
+- [raw per-query result](../../evidence/claim_4/raw/result.json)
+- [trajectory CSV](../../evidence/claim_4/raw/trajectories.csv)
+- [claim contract](../../evidence/claim_4/claim_contract.json)
+- [source audit](../../evidence/claim_4/source_audit.md)
+- [independent checker](../../evidence/claim_4/independent_checker.json)
+- [negative control](../../evidence/claim_4/negative_control.json)
+- [runtime](../../evidence/claim_4/runtime.json)
+- [evaluator guide](../../evidence/claim_4/EVAL.md)
 
 Run `1da1893a-85e4-42f7-9085-541596e0b322` at Git SHA
 `5ad638648cfdf45e7a5ea2d82c6b9ae28ffb61aa` on HF
-`cpu-upgrade`: estimated 64 cores; actual allocation 64 logical and
-affinity CPUs; thread limit 64; verifier runtime `513.4822568770032 s`;
-total job runtime `568 s`; peak RSS `1,372,860 KiB`.
+`cpu-upgrade`, provisioned as 8 vCPUs and 32 GB. The container exposed
+64 logical/affinity CPUs and used a 64-thread limit. Verifier runtime was
+`513.4822568770032 s`; total job runtime `568 s`; peak RSS
+`1,372,860 KiB`.
 
 ## Limitations
 
