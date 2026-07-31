@@ -1,0 +1,9 @@
+{
+  "name": "beta=0 uniform weights",
+  "per_seed_convergence_rates": [
+    0,
+    0,
+    0
+  ],
+  "rejected": true
+}

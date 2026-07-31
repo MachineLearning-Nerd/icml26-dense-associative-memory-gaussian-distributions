@@ -1,0 +1,13 @@
+{
+  "git_sha": "5ad638648cfdf45e7a5ea2d82c6b9ae28ffb61aa",
+  "run_id": "1da1893a-85e4-42f7-9085-541596e0b322",
+  "fixed_command": "uv sync --frozen && uv run python -m reproduction.run",
+  "estimated_required_cores": 64,
+  "selected_compute_flavor": "cpu-upgrade",
+  "logical_cpu_allocation": 64,
+  "affinity_cpu_allocation": 64,
+  "thread_limit": 64,
+  "verifier_runtime_seconds": 513.4822568770032,
+  "total_job_runtime_seconds": 568,
+  "max_rss_kib": 1372860
+}

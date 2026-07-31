@@ -1,0 +1,29 @@
+{
+  "claim_id": 6,
+  "source": {
+    "paper": "arXiv:2509.23162v2",
+    "anchors": ["S6.SS2.SSS3", "S6.F8", "alg1"]
+  },
+  "statement": "For N=1000 non-commuting Gaussian patterns in d=10, Algorithm 1 converges in one step at beta=1 for radii 1/sqrt(beta N) and 100/sqrt(beta N), with higher variance and an approximately 1e-3 error floor; beta=0.1 does not converge.",
+  "parameters": {
+    "N": 1000,
+    "d": 10,
+    "queries": 750,
+    "sphere_radius": "sqrt(2d)",
+    "betas": [1.0, 0.1],
+    "radius_multipliers": [1, 100],
+    "updates": 1,
+    "paper_text_threshold": 0.001,
+    "paper_plot_threshold": 1e-6,
+    "seeds": [20260730, 20260731, 20260732]
+  },
+  "acceptance": [
+    "Every memory has mean norm squared d, covariance trace d, and a positive-definite covariance generated from WW^T+0.01I.",
+    "The covariance family is numerically non-commuting.",
+    "Every query has the requested W2 radius, with half the squared budget in its mean and half in its covariance.",
+    "At beta=1, both radii have mean one-step W2 error at most 1e-3 and at least 99% nearest-target retrieval.",
+    "At beta=0.1, both radii have at most 1% of queries below the 1e-3 prose threshold.",
+    "A SciPy square-root loop independently matches the batched Algorithm 1 update.",
+    "A beta-zero uniform-weight lower bound rules out retrieval."
+  ]
+}

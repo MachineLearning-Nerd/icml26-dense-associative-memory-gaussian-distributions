@@ -1,0 +1,28 @@
+{
+  "claim_id": 4,
+  "source": {
+    "paper": "arXiv:2509.23162v2",
+    "anchors": ["S4.SS1", "S4.F3", "alg2", "S6.F6"]
+  },
+  "statement": "With N=10000 commuting Gaussian patterns in d=50, 7500 perturbed queries converge at beta=1 but fail to converge at beta=0.1, for radii 1/sqrt(beta N) and 100/sqrt(beta N).",
+  "parameters": {
+    "N": 10000,
+    "d": 50,
+    "queries": 7500,
+    "lambda_min": 1.0,
+    "lambda_max": 1.1,
+    "betas": [1.0, 0.1],
+    "radius_multipliers": [1, 100],
+    "iterations": 3,
+    "convergence_threshold": 1e-6,
+    "seeds": [20260730, 20260731, 20260732]
+  },
+  "acceptance": [
+    "Every Algorithm 2 memory and query satisfies the exact numerical contract.",
+    "At beta=1 both radii have at least 99.9% convergence by iteration 3.",
+    "At beta=0.1 both radii have at most 1% convergence by iteration 3.",
+    "Confidence intervals preserve the success/failure separation.",
+    "An independent loop implementation agrees with the vectorized Algorithm 1 update.",
+    "A beta=0 uniform-weight control fails retrieval."
+  ]
+}

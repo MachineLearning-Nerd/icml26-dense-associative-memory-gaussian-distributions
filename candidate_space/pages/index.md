@@ -10,6 +10,7 @@ unchanged in the release candidate.
 | 1 | [Wasserstein LSE formulation](current/claim-1.md) | VERIFIED |
 | 2 | [Exponential storage capacity](current/claim-2.md) | VERIFIED |
 | 3 | [Dimension-decay retrieval](current/claim-3.md) | VERIFIED |
+| 4 | [Exact synthetic temperature separation](current/claim-4.md) | VERIFIED |
 
 ## Visibility matrix
 
@@ -18,3 +19,4 @@ unchanged in the release candidate.
 | 1 | `pages/current/claim-1.md` | yes, excerpt and source path | yes | yes | finite difference | sign reversal rejected | yes | VERIFIED |
 | 2 | `pages/current/claim-2.md` | yes, source path | yes | yes | proof + exact L2 | duplicate rejected | yes | VERIFIED |
 | 3 | `pages/current/claim-3.md` | yes, source path | yes | yes | long double | reversed logits rejected | yes | VERIFIED |
+| 4 | `pages/current/claim-4.md` | yes, linked verifier | yes | yes | scalar loop | beta-zero rejected | yes | VERIFIED |
