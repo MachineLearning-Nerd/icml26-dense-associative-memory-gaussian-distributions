@@ -1,0 +1,7 @@
+{
+  "name": "SciPy sqrtm scalar Algorithm 1",
+  "mean_maximum_absolute_error": 2.6922908347160046E-15,
+  "covariance_maximum_absolute_error": 7.549516567451064E-15,
+  "tolerance": 1E-9,
+  "passed": true
+}

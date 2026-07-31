@@ -2,9 +2,9 @@
   "claim_id": 1,
   "status_vocabulary": ["VERIFIED", "FALSIFIED", "BLOCKED"],
   "source": {
-    "paper": "arXiv:2509.23162v2",
+    "paper": "arXiv:2509.23162v1",
     "anchor": "S2.E1",
-    "url": "https://ar5iv.labs.arxiv.org/html/2509.23162#S2.E1"
+    "url": "https://ar5iv.labs.arxiv.org/html/2509.23162v1#S2.E1"
   },
   "statement": "For beta > 0 and stored distributions X_1,...,X_N in P_2(R^d), the proposed energy is E(xi)=-(1/beta) log sum_i exp(-beta W_2^2(X_i,xi)); its Wasserstein gradient induces Gibbs-weighted transport toward the stored distributions.",
   "domain": "Finite collections of non-degenerate Gaussian distributions with beta > 0.",

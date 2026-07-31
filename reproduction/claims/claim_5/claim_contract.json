@@ -1,0 +1,30 @@
+{
+  "claim_id": 5,
+  "source": {
+    "paper": "arXiv:2509.23162v1",
+    "anchors": ["Section 4.1.1", "Figure 4", "Figure 5"],
+    "author_notebook_commit": "d5346b69a778ad316c031a8e0f2f13b5f86e6e15"
+  },
+  "statement": "Text8 Gaussian word embeddings with N=10000, d=50 and spherical covariances exhibit near-zero retrieval below beta 10, a sharp transition around beta 15, and near-perfect retrieval above beta 30 after at most ten Algorithm 1 updates.",
+  "parameters": {
+    "text8_tokens": 17005207,
+    "author_training_token_cap": 100000,
+    "N": 10000,
+    "d": 50,
+    "epochs": 5,
+    "covariance": "spherical",
+    "energy": "KL",
+    "queries_per_seed": 100,
+    "query_seeds": [42, 43, 44],
+    "beta_grid": "numpy.logspace(-1, 2, 20)",
+    "maximum_updates": 10
+  },
+  "acceptance": [
+    "The canonical Text8 archive, corpus, token count, type count, vocabulary and cutoff hashes match.",
+    "The deleted author notebook is retrieved by immutable commit and SHA-256 and exposes the exact configuration and executed phase curve.",
+    "An independent full-scale training reconstruction uses actual Text8 tokens and satisfies N=10000, d=50, five epochs and spherical covariance constraints.",
+    "The author seed and two validation seeds show near-zero retrieval below beta 10, a sharp adjacent jump, transition in [11,24], and at least 95% retrieval above beta 30.",
+    "A scalar-loop checker agrees with the vectorized Wasserstein update.",
+    "A beta-zero uniform-weight control retrieves at most 1%."
+  ]
+}

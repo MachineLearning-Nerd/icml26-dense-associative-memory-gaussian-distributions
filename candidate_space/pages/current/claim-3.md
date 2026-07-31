@@ -1,8 +1,8 @@
 # Claim 3 — retrieval error decays in dimension: VERIFIED
 
-Canonical source: arXiv:2509.23162v2,
-[Theorem 3](https://ar5iv.labs.arxiv.org/html/2509.23162#Thmtheorem3)
-and [Corollary 2](https://ar5iv.labs.arxiv.org/html/2509.23162#Thmcorollary2).
+Canonical source: arXiv:2509.23162v1,
+[Theorem 3](https://ar5iv.labs.arxiv.org/html/2509.23162v1#Thmtheorem3)
+and [Corollary 2](https://ar5iv.labs.arxiv.org/html/2509.23162v1#Thmcorollary2).
 
 ## Exact contract
 

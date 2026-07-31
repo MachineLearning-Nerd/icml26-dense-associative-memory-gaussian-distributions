@@ -15,6 +15,7 @@ from reproduction.claims.claim_1.verifier import verify as verify_claim_1
 from reproduction.claims.claim_2.verifier import verify as verify_claim_2
 from reproduction.claims.claim_3.verifier import verify as verify_claim_3
 from reproduction.claims.claim_4.verifier import verify as verify_claim_4
+from reproduction.claims.claim_5.verifier import verify as verify_claim_5
 from reproduction.claims.claim_6.verifier import verify as verify_claim_6
 
 
@@ -35,10 +36,11 @@ def main():
     claim_2 = verify_claim_2(output_root / "claim_2")
     claim_3 = verify_claim_3(output_root / "claim_3")
     claim_4 = verify_claim_4(output_root / "claim_4")
+    claim_5 = verify_claim_5(output_root / "claim_5")
     claim_6 = verify_claim_6(output_root / "claim_6")
     runtime = time.perf_counter() - started
     evidence = {
-        "suite": "cumulative-claims-1-4-and-6",
+        "suite": "cumulative-claims-1-through-6",
         "fixed_command": "uv sync --frozen && uv run python -m reproduction.run",
         "git_sha": command_output(["git", "rev-parse", "HEAD"]),
         "uv": command_output(["uv", "--version"]),
@@ -51,7 +53,14 @@ def main():
         "thread_limit": THREAD_LIMIT,
         "runtime_seconds": runtime,
         "max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
-        "claims": [claim_1, claim_2, claim_3, claim_4, claim_6],
+        "claims": [
+            claim_1,
+            claim_2,
+            claim_3,
+            claim_4,
+            claim_5,
+            claim_6,
+        ],
     }
     (output_root / "suite.json").write_text(json.dumps(evidence, indent=2) + "\n")
     print("BEGIN_REPRODUCTION_EVIDENCE")

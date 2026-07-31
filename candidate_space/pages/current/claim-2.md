@@ -1,8 +1,8 @@
 # Claim 2 — exponential storage capacity: VERIFIED
 
-Canonical source: arXiv:2509.23162v2,
-[Theorem 1](https://ar5iv.labs.arxiv.org/html/2509.23162#Thmtheorem1)
-and [Algorithm 3](https://ar5iv.labs.arxiv.org/html/2509.23162#alg3).
+Canonical source: arXiv:2509.23162v1,
+[Theorem 1](https://ar5iv.labs.arxiv.org/html/2509.23162v1#Thmtheorem1)
+and [Algorithm 3](https://ar5iv.labs.arxiv.org/html/2509.23162v1#alg3).
 
 ## Exact contract
 

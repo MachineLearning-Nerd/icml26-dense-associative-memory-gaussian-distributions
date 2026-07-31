@@ -1,0 +1,49 @@
+{
+  "source_url": "https://export.arxiv.org/e-print/2509.23162v1",
+  "source_sha256": "a88a9b572b0d3c28b62de7f9419885cd3367d25e8b453bf4ffeba36a68f1f6ee",
+  "figure": "retrieval_dynamics_general,N_1000,d_10,beta_1,perturb100x.png",
+  "figure_sha256": "58cab4d6ad088d862eb892d5eee30389d77cf23d8434185e9f692b27f3bebd18",
+  "figure_shape": [
+    1764,
+    2956,
+    4
+  ],
+  "calibration_grid_pixel_rows": [
+    174.0,
+    400.0,
+    625.0,
+    851.0,
+    1076.0,
+    1301.0
+  ],
+  "calibration_grid_values": [
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    1.0,
+    0.5
+  ],
+  "calibration_maximum_pixel_residual": 0.4666666666672654,
+  "curve_pixel_rows": [
+    105.0,
+    1247.0,
+    1425.0,
+    1452.0,
+    1455.5,
+    1455.5
+  ],
+  "digitized_mean_w2_by_iteration": [
+    3.1538006506950587,
+    0.6205264714581477,
+    0.2256728778467903,
+    0.16577935522034845,
+    0.15801538006506896,
+    0.15801538006506896
+  ],
+  "checks": {
+    "axis_calibration": true,
+    "one_step_above_0_1": true,
+    "five_steps_above_0_05": true
+  }
+}

@@ -1,7 +1,7 @@
 {
   "claim_id": 3,
   "source": {
-    "paper": "arXiv:2509.23162v2",
+    "paper": "arXiv:2509.23162v1",
     "anchors": ["Thmtheorem2", "Thmtheorem3", "Thmcorollary2"]
   },
   "statement": "For Theorem 1 Algorithm 3 memories and a query within r=1/sqrt(beta N) of a stored pattern, Theorem 3 bounds one-step retrieval error by 3/sqrt(beta N); substituting N=Omega(exp(d alpha^2/16)) makes the error exponentially small in dimension.",

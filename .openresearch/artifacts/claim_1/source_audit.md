@@ -1,8 +1,8 @@
 # Claim 1 source audit
 
-- Source: ar5iv HTML for arXiv:2509.23162v2
+- Source: ar5iv HTML for arXiv:2509.23162v1
 - Retrieved: 2026-07-30T07:22:13Z
-- URL: https://ar5iv.labs.arxiv.org/html/2509.23162
+- URL: https://ar5iv.labs.arxiv.org/html/2509.23162v1
 - HTML SHA-256: `12972950e6f86841398b97457bbe3a8ee5c2e8a6cbdf0fd7eb319bbb6ebd1628`
 - PDF SHA-256: `3fc686f5cbc55b7ecb2f80dbb00c50adb3621c3645a100945e95a663983a5119`
 - Anchors: Section 2 `S2`; energy equation `S2.E1`; Gibbs weights `S2.E2`; fixed-point operator `S2.E4`.

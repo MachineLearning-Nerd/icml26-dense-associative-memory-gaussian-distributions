@@ -11,6 +11,7 @@ unchanged in the release candidate.
 | 2 | [Exponential storage capacity](current/claim-2.md) | VERIFIED |
 | 3 | [Dimension-decay retrieval](current/claim-3.md) | VERIFIED |
 | 4 | [Exact synthetic temperature separation](current/claim-4.md) | VERIFIED |
+| 6 | [Non-commuting one-step convergence](current/claim-6.md) | FALSIFIED |
 
 ## Visibility matrix
 
@@ -20,3 +21,4 @@ unchanged in the release candidate.
 | 2 | `pages/current/claim-2.md` | yes, source path | yes | yes | proof + exact L2 | duplicate rejected | yes | VERIFIED |
 | 3 | `pages/current/claim-3.md` | yes, source path | yes | yes | long double | reversed logits rejected | yes | VERIFIED |
 | 4 | `pages/current/claim-4.md` | yes, linked verifier | yes | yes | scalar loop | beta-zero rejected | yes | VERIFIED |
+| 6 | `pages/current/claim-6.md` | yes, linked verifier | yes | yes | SciPy `sqrtm` | beta-zero rejected | yes | FALSIFIED |

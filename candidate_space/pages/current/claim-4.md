@@ -1,7 +1,7 @@
 # Claim 4 — exact synthetic temperature separation: VERIFIED
 
-Canonical source: arXiv:2509.23162v2,
-[Section 4.1](https://ar5iv.labs.arxiv.org/html/2509.23162#S4.SS1),
+Canonical source: arXiv:2509.23162v1,
+[Section 4.1](https://ar5iv.labs.arxiv.org/html/2509.23162v1#S4.SS1),
 Figure 3, Algorithm 2, and Appendix Figure 6.
 
 ## Exact contract

@@ -1,6 +1,6 @@
 # Claim 2 source audit
 
-- Source: arXiv:2509.23162v2, Theorem 1 and Appendix 6.4.
+- Source: arXiv:2509.23162v1, Theorem 1 and Appendix 6.4.
 - HTML anchor: `Thmtheorem1`; sampler: `alg3`.
 - Retrieved: 2026-07-30T07:22:13Z.
 - HTML SHA-256: `12972950e6f86841398b97457bbe3a8ee5c2e8a6cbdf0fd7eb319bbb6ebd1628`.

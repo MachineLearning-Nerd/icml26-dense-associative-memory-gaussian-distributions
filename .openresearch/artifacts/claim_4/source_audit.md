@@ -1,6 +1,6 @@
 # Claim 4 source audit
 
-- Source: arXiv:2509.23162v2, Section 4.1, Figure 3, Algorithm 2,
+- Source: arXiv:2509.23162v1, Section 4.1, Figure 3, Algorithm 2,
   and Appendix Figure 6.
 - Retrieved: 2026-07-30T07:22:13Z.
 - HTML SHA-256: `12972950e6f86841398b97457bbe3a8ee5c2e8a6cbdf0fd7eb319bbb6ebd1628`.

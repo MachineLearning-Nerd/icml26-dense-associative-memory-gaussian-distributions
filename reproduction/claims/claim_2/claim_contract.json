@@ -1,7 +1,7 @@
 {
   "claim_id": 2,
   "source": {
-    "paper": "arXiv:2509.23162v2",
+    "paper": "arXiv:2509.23162v1",
     "anchors": ["Thmtheorem1", "alg3", "S6.SS4"]
   },
   "statement": "Under Theorem 1's assumptions, Algorithm 3 samples N=floor(sqrt(p/2) exp(d alpha^2/16)) commuting Gaussian measures on the stated Wasserstein sphere and the DAM stores Omega(N) patterns with probability at least 1-p for all sufficiently large d.",

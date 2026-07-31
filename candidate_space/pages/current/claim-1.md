@@ -1,7 +1,7 @@
 # Claim 1 — Wasserstein LSE formulation: VERIFIED
 
-Canonical source: arXiv:2509.23162v2, Section 2
-([equation 1](https://ar5iv.labs.arxiv.org/html/2509.23162#S2.E1)).
+Canonical source: arXiv:2509.23162v1, Section 2
+([equation 1](https://ar5iv.labs.arxiv.org/html/2509.23162v1#S2.E1)).
 Source HTML was retrieved `2026-07-30T07:22:13Z` and hashes to
 `12972950e6f86841398b97457bbe3a8ee5c2e8a6cbdf0fd7eb319bbb6ebd1628`.
 
