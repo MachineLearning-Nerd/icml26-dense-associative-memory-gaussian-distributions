@@ -1,0 +1,29 @@
+{
+  "gamma": 1.1,
+  "alpha": 0.8093796403913501,
+  "claimed_exponential_rate": 0.040943462642501954,
+  "checked_asymptotic_rate": 0.04094346264250198,
+  "numerical_d0": 364,
+  "tail_checks": {
+    "floor_lower_bound": true,
+    "separation_remainder": true,
+    "assumption_1_constraint": true,
+    "contraction": true,
+    "balls_disjoint": true,
+    "exponential_beats_linear": true,
+    "remainder_decreases": true,
+    "union_bound_all_d": true
+  },
+  "checks": {
+    "p_domain": true,
+    "spectral_domain": true,
+    "gamma_domain": true,
+    "alpha_positive": true,
+    "beta_constraint": true,
+    "alpha_identity": true,
+    "finite_d0_found": true,
+    "omega_rate": true,
+    "tail_monotonicity": true
+  },
+  "passed": true
+}

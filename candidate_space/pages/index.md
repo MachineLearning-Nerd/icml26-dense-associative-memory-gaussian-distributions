@@ -8,9 +8,11 @@ unchanged in the release candidate.
 | Claim | Current page | Status |
 | --- | --- | --- |
 | 1 | [Wasserstein LSE formulation](current/claim-1.md) | VERIFIED |
+| 2 | [Exponential storage capacity](current/claim-2.md) | VERIFIED |
 
 ## Visibility matrix
 
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | `pages/current/claim-1.md` | yes, excerpt and source path | yes | yes | finite difference | sign reversal rejected | yes | VERIFIED |
+| 2 | `pages/current/claim-2.md` | yes, source path | yes | yes | proof + exact L2 | duplicate rejected | yes | VERIFIED |

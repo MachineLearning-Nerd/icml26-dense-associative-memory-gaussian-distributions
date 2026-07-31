@@ -1,0 +1,2212 @@
+{
+  "claim_id": 2,
+  "verdict": "VERIFIED",
+  "parameters": {
+    "p": 0.1,
+    "lambda_min": 1.0,
+    "lambda_max": 1.1,
+    "beta": 3.0,
+    "seeds": [
+      20260730,
+      20260731,
+      20260732,
+      20260733,
+      20260734
+    ]
+  },
+  "proof_certificate": {
+    "gamma": 1.1,
+    "alpha": 0.8093796403913501,
+    "claimed_exponential_rate": 0.040943462642501954,
+    "checked_asymptotic_rate": 0.04094346264250198,
+    "numerical_d0": 364,
+    "tail_checks": {
+      "floor_lower_bound": true,
+      "separation_remainder": true,
+      "assumption_1_constraint": true,
+      "contraction": true,
+      "balls_disjoint": true,
+      "exponential_beats_linear": true,
+      "remainder_decreases": true,
+      "union_bound_all_d": true
+    },
+    "checks": {
+      "p_domain": true,
+      "spectral_domain": true,
+      "gamma_domain": true,
+      "alpha_positive": true,
+      "beta_constraint": true,
+      "alpha_identity": true,
+      "finite_d0_found": true,
+      "omega_rate": true,
+      "tail_monotonicity": true
+    },
+    "passed": true
+  },
+  "theorem_sweep": [
+    {
+      "seed": 20260730,
+      "dimension": 100,
+      "count": 13,
+      "max_pair_dot": 0.20864210990490265,
+      "allowed_max_dot": 0.7888778427631004,
+      "separation_margin": 0.5802357328581977,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 140,
+      "count": 69,
+      "max_pair_dot": 0.28599180436698746,
+      "allowed_max_dot": 0.7940111125726605,
+      "separation_margin": 0.5080193082056731,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 180,
+      "count": 354,
+      "max_pair_dot": 0.32757859856578386,
+      "allowed_max_dot": 0.7975887274635157,
+      "separation_margin": 0.47001012889773186,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 220,
+      "count": 1825,
+      "max_pair_dot": 0.32031822811419797,
+      "allowed_max_dot": 0.799979994341413,
+      "separation_margin": 0.479661766227215,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 260,
+      "count": 9390,
+      "max_pair_dot": 0.33656194434248055,
+      "allowed_max_dot": 0.8017416878355843,
+      "separation_margin": 0.46517974349310376,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 100,
+      "count": 13,
+      "max_pair_dot": 0.25435245100766846,
+      "allowed_max_dot": 0.7888778427631004,
+      "separation_margin": 0.5345253917554319,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 140,
+      "count": 69,
+      "max_pair_dot": 0.2966779760014291,
+      "allowed_max_dot": 0.7940111125726605,
+      "separation_margin": 0.49733313657123146,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 180,
+      "count": 354,
+      "max_pair_dot": 0.31222177753674274,
+      "allowed_max_dot": 0.7975887274635157,
+      "separation_margin": 0.485366949926773,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 220,
+      "count": 1825,
+      "max_pair_dot": 0.3088757729252501,
+      "allowed_max_dot": 0.799979994341413,
+      "separation_margin": 0.4911042214161629,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 260,
+      "count": 9390,
+      "max_pair_dot": 0.3439788050025385,
+      "allowed_max_dot": 0.8017416878355843,
+      "separation_margin": 0.4577628828330458,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 100,
+      "count": 13,
+      "max_pair_dot": 0.22009131397285014,
+      "allowed_max_dot": 0.7888778427631004,
+      "separation_margin": 0.5687865287902503,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 140,
+      "count": 69,
+      "max_pair_dot": 0.34342462536174234,
+      "allowed_max_dot": 0.7940111125726605,
+      "separation_margin": 0.4505864872109182,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 180,
+      "count": 354,
+      "max_pair_dot": 0.30716414006842413,
+      "allowed_max_dot": 0.7975887274635157,
+      "separation_margin": 0.4904245873950916,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 220,
+      "count": 1825,
+      "max_pair_dot": 0.34840890468456526,
+      "allowed_max_dot": 0.799979994341413,
+      "separation_margin": 0.4515710896568477,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 260,
+      "count": 9390,
+      "max_pair_dot": 0.3328900173917742,
+      "allowed_max_dot": 0.8017416878355843,
+      "separation_margin": 0.4688516704438101,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 100,
+      "count": 13,
+      "max_pair_dot": 0.2064340645227509,
+      "allowed_max_dot": 0.7888778427631004,
+      "separation_margin": 0.5824437782403494,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 140,
+      "count": 69,
+      "max_pair_dot": 0.2802359365323781,
+      "allowed_max_dot": 0.7940111125726605,
+      "separation_margin": 0.5137751760402824,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 180,
+      "count": 354,
+      "max_pair_dot": 0.3164387987370069,
+      "allowed_max_dot": 0.7975887274635157,
+      "separation_margin": 0.4811499287265088,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 220,
+      "count": 1825,
+      "max_pair_dot": 0.3279501440801164,
+      "allowed_max_dot": 0.799979994341413,
+      "separation_margin": 0.47202985026129657,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 260,
+      "count": 9390,
+      "max_pair_dot": 0.3321087127529328,
+      "allowed_max_dot": 0.8017416878355843,
+      "separation_margin": 0.4696329750826515,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 100,
+      "count": 13,
+      "max_pair_dot": 0.20708654449454847,
+      "allowed_max_dot": 0.7888778427631004,
+      "separation_margin": 0.5817912982685519,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 140,
+      "count": 69,
+      "max_pair_dot": 0.2966453083917088,
+      "allowed_max_dot": 0.7940111125726605,
+      "separation_margin": 0.4973658041809518,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 180,
+      "count": 354,
+      "max_pair_dot": 0.3160013501930172,
+      "allowed_max_dot": 0.7975887274635157,
+      "separation_margin": 0.4815873772704985,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 220,
+      "count": 1825,
+      "max_pair_dot": 0.3099534581025192,
+      "allowed_max_dot": 0.799979994341413,
+      "separation_margin": 0.4900265362388938,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 260,
+      "count": 9390,
+      "max_pair_dot": 0.3322123750174359,
+      "allowed_max_dot": 0.8017416878355843,
+      "separation_margin": 0.4695293128181484,
+      "separation_passed": true,
+      "algorithm_3_invariants": true
+    }
+  ],
+  "independent_l2_audits": [
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.488138684352009,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.934820127633458,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.567339564216354,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.277564924562,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.228973971780079,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.398460873214191,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.939406329961798,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.487961097191032,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.197534317923157,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 10.861712201271644,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.171822208818696,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.848076735003417,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.63111150597291,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.364533042341066,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.011615044210316,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.375161569799275,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.812023168186556,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.523406272498335,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.343997799983242,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.225216179414701,
+      "passed": true
+    },
+    {
+      "pairs_checked": 26,
+      "minimum_exact_minus_lower_bound": 4.0341059584373795,
+      "passed": true
+    },
+    {
+      "pairs_checked": 138,
+      "minimum_exact_minus_lower_bound": 5.7454030262332765,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 7.510819651090685,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 9.187511334586816,
+      "passed": true
+    },
+    {
+      "pairs_checked": 256,
+      "minimum_exact_minus_lower_bound": 11.286850454806483,
+      "passed": true
+    }
+  ],
+  "calibration_fit": {
+    "per_seed_log_capacity_slopes": [
+      0.12130075659799033,
+      0.12130075659799033,
+      0.11696858671949069,
+      0.13429726623348928,
+      0.12563292647649002
+    ],
+    "mean_slope": 0.12390005852509015,
+    "lower_95_percent_bound": 0.11574225041692215
+  },
+  "calibration_sweep": [
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 8,
+      "max_pair_dot": 0.19592564346800362,
+      "allowed_max_dot": 0.6090796808099284,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 16,
+      "max_pair_dot": 0.4080676010328966,
+      "allowed_max_dot": 0.563695043987551,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 32,
+      "max_pair_dot": 0.5037083296027658,
+      "allowed_max_dot": 0.5183104071651735,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 64,
+      "max_pair_dot": 0.5111982874442935,
+      "allowed_max_dot": 0.47292577034279626,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 128,
+      "max_pair_dot": 0.6219486354986161,
+      "allowed_max_dot": 0.4275411335204188,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 256,
+      "max_pair_dot": 0.6809068064651137,
+      "allowed_max_dot": 0.3821564966980414,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 512,
+      "max_pair_dot": 0.6809068064651137,
+      "allowed_max_dot": 0.33677185987566416,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 1024,
+      "max_pair_dot": 0.7297657148901834,
+      "allowed_max_dot": 0.2913872230532867,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 2048,
+      "max_pair_dot": 0.7375480840373952,
+      "allowed_max_dot": 0.24600258623090943,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 4096,
+      "max_pair_dot": 0.7942204508491826,
+      "allowed_max_dot": 0.20061794940853206,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 32,
+      "count": 8192,
+      "max_pair_dot": 0.7942204508491826,
+      "allowed_max_dot": 0.15523331258615458,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 8,
+      "max_pair_dot": 0.27723450620759504,
+      "allowed_max_dot": 0.7002039093527411,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 16,
+      "max_pair_dot": 0.32134133757328937,
+      "allowed_max_dot": 0.6699474848044895,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 32,
+      "max_pair_dot": 0.3787972135878568,
+      "allowed_max_dot": 0.639691060256238,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 64,
+      "max_pair_dot": 0.5319564161357334,
+      "allowed_max_dot": 0.6094346357079864,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 128,
+      "max_pair_dot": 0.5534289778866736,
+      "allowed_max_dot": 0.5791782111597348,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 256,
+      "max_pair_dot": 0.5534289778866736,
+      "allowed_max_dot": 0.5489217866114833,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 512,
+      "max_pair_dot": 0.5936860141193457,
+      "allowed_max_dot": 0.5186653620632317,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 1024,
+      "max_pair_dot": 0.6308258729743514,
+      "allowed_max_dot": 0.48840893751498005,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 2048,
+      "max_pair_dot": 0.6604209878505769,
+      "allowed_max_dot": 0.45815251296672854,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 4096,
+      "max_pair_dot": 0.6604209878505769,
+      "allowed_max_dot": 0.4278960884184769,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 48,
+      "count": 8192,
+      "max_pair_dot": 0.6847872192066394,
+      "allowed_max_dot": 0.3976396638702254,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 8,
+      "max_pair_dot": 0.17057792477507377,
+      "allowed_max_dot": 0.7470513543703977,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 16,
+      "max_pair_dot": 0.30824765110971153,
+      "allowed_max_dot": 0.724359035959209,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 32,
+      "max_pair_dot": 0.3597587285063086,
+      "allowed_max_dot": 0.7016667175480205,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 64,
+      "max_pair_dot": 0.36148725226813805,
+      "allowed_max_dot": 0.6789743991368317,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 128,
+      "max_pair_dot": 0.46680542282951265,
+      "allowed_max_dot": 0.6562820807256431,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 256,
+      "max_pair_dot": 0.46700119148824143,
+      "allowed_max_dot": 0.6335897623144543,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 512,
+      "max_pair_dot": 0.5023388674094762,
+      "allowed_max_dot": 0.6108974439032656,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 1024,
+      "max_pair_dot": 0.5475115393179419,
+      "allowed_max_dot": 0.588205125492077,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 2048,
+      "max_pair_dot": 0.5577782423546246,
+      "allowed_max_dot": 0.5655128070808882,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 4096,
+      "max_pair_dot": 0.5904412234389914,
+      "allowed_max_dot": 0.5428204886696997,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 64,
+      "count": 8192,
+      "max_pair_dot": 0.5904412234389914,
+      "allowed_max_dot": 0.5201281702585109,
+      "passed": false
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 8,
+      "max_pair_dot": 0.17201067621368704,
+      "allowed_max_dot": 0.7757232529147324,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 16,
+      "max_pair_dot": 0.19741040284397798,
+      "allowed_max_dot": 0.7575693981857815,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 32,
+      "max_pair_dot": 0.28085305483613104,
+      "allowed_max_dot": 0.7394155434568306,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 64,
+      "max_pair_dot": 0.3594111534199052,
+      "allowed_max_dot": 0.7212616887278795,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 128,
+      "max_pair_dot": 0.43832978513248344,
+      "allowed_max_dot": 0.7031078339989286,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 256,
+      "max_pair_dot": 0.43832978513248344,
+      "allowed_max_dot": 0.6849539792699777,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 512,
+      "max_pair_dot": 0.4931161306932286,
+      "allowed_max_dot": 0.6668001245410267,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 1024,
+      "max_pair_dot": 0.4931161306932286,
+      "allowed_max_dot": 0.6486462698120757,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 2048,
+      "max_pair_dot": 0.5206057325380122,
+      "allowed_max_dot": 0.6304924150831248,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 4096,
+      "max_pair_dot": 0.5602476868419719,
+      "allowed_max_dot": 0.6123385603541739,
+      "passed": true
+    },
+    {
+      "seed": 20260730,
+      "dimension": 80,
+      "count": 8192,
+      "max_pair_dot": 0.5602476868419719,
+      "allowed_max_dot": 0.594184705625223,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 8,
+      "max_pair_dot": 0.42032070540219735,
+      "allowed_max_dot": 0.6090796808099284,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 16,
+      "max_pair_dot": 0.4519650968560995,
+      "allowed_max_dot": 0.563695043987551,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 32,
+      "max_pair_dot": 0.4658101774151712,
+      "allowed_max_dot": 0.5183104071651735,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 64,
+      "max_pair_dot": 0.5123640011649382,
+      "allowed_max_dot": 0.47292577034279626,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 128,
+      "max_pair_dot": 0.6310822466770492,
+      "allowed_max_dot": 0.4275411335204188,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 256,
+      "max_pair_dot": 0.6370956359922337,
+      "allowed_max_dot": 0.3821564966980414,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 512,
+      "max_pair_dot": 0.6678644633163592,
+      "allowed_max_dot": 0.33677185987566416,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 1024,
+      "max_pair_dot": 0.7130523574698547,
+      "allowed_max_dot": 0.2913872230532867,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 2048,
+      "max_pair_dot": 0.744187013494759,
+      "allowed_max_dot": 0.24600258623090943,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 4096,
+      "max_pair_dot": 0.7541625336082098,
+      "allowed_max_dot": 0.20061794940853206,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 32,
+      "count": 8192,
+      "max_pair_dot": 0.7788164706034688,
+      "allowed_max_dot": 0.15523331258615458,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 8,
+      "max_pair_dot": 0.4626669795080825,
+      "allowed_max_dot": 0.7002039093527411,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 16,
+      "max_pair_dot": 0.4626669795080825,
+      "allowed_max_dot": 0.6699474848044895,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 32,
+      "max_pair_dot": 0.4626669795080825,
+      "allowed_max_dot": 0.639691060256238,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 64,
+      "max_pair_dot": 0.4654470208880662,
+      "allowed_max_dot": 0.6094346357079864,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 128,
+      "max_pair_dot": 0.50837603153413,
+      "allowed_max_dot": 0.5791782111597348,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 256,
+      "max_pair_dot": 0.566098057030261,
+      "allowed_max_dot": 0.5489217866114833,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 512,
+      "max_pair_dot": 0.6017081004879401,
+      "allowed_max_dot": 0.5186653620632317,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 1024,
+      "max_pair_dot": 0.6354485398027621,
+      "allowed_max_dot": 0.48840893751498005,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 2048,
+      "max_pair_dot": 0.6354485398027621,
+      "allowed_max_dot": 0.45815251296672854,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 4096,
+      "max_pair_dot": 0.6710359861591089,
+      "allowed_max_dot": 0.4278960884184769,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 48,
+      "count": 8192,
+      "max_pair_dot": 0.7061953660800567,
+      "allowed_max_dot": 0.3976396638702254,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 8,
+      "max_pair_dot": 0.32449041962228153,
+      "allowed_max_dot": 0.7470513543703977,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 16,
+      "max_pair_dot": 0.32449041962228153,
+      "allowed_max_dot": 0.724359035959209,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 32,
+      "max_pair_dot": 0.4050766102744325,
+      "allowed_max_dot": 0.7016667175480205,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 64,
+      "max_pair_dot": 0.4050766102744325,
+      "allowed_max_dot": 0.6789743991368317,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 128,
+      "max_pair_dot": 0.4544096821061806,
+      "allowed_max_dot": 0.6562820807256431,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 256,
+      "max_pair_dot": 0.48536634292050534,
+      "allowed_max_dot": 0.6335897623144543,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 512,
+      "max_pair_dot": 0.4988767006691249,
+      "allowed_max_dot": 0.6108974439032656,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 1024,
+      "max_pair_dot": 0.5291461528205263,
+      "allowed_max_dot": 0.588205125492077,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 2048,
+      "max_pair_dot": 0.5621273404787571,
+      "allowed_max_dot": 0.5655128070808882,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 4096,
+      "max_pair_dot": 0.5846416674951549,
+      "allowed_max_dot": 0.5428204886696997,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 64,
+      "count": 8192,
+      "max_pair_dot": 0.620610154559301,
+      "allowed_max_dot": 0.5201281702585109,
+      "passed": false
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 8,
+      "max_pair_dot": 0.22995941541155118,
+      "allowed_max_dot": 0.7757232529147324,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 16,
+      "max_pair_dot": 0.24689475254491638,
+      "allowed_max_dot": 0.7575693981857815,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 32,
+      "max_pair_dot": 0.31844534706135363,
+      "allowed_max_dot": 0.7394155434568306,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 64,
+      "max_pair_dot": 0.33607519388310514,
+      "allowed_max_dot": 0.7212616887278795,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 128,
+      "max_pair_dot": 0.41405669114479904,
+      "allowed_max_dot": 0.7031078339989286,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 256,
+      "max_pair_dot": 0.45720475584645753,
+      "allowed_max_dot": 0.6849539792699777,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 512,
+      "max_pair_dot": 0.45753590405749195,
+      "allowed_max_dot": 0.6668001245410267,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 1024,
+      "max_pair_dot": 0.5061074888769664,
+      "allowed_max_dot": 0.6486462698120757,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 2048,
+      "max_pair_dot": 0.5159844423627514,
+      "allowed_max_dot": 0.6304924150831248,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 4096,
+      "max_pair_dot": 0.5490314022207162,
+      "allowed_max_dot": 0.6123385603541739,
+      "passed": true
+    },
+    {
+      "seed": 20260731,
+      "dimension": 80,
+      "count": 8192,
+      "max_pair_dot": 0.576366335930831,
+      "allowed_max_dot": 0.594184705625223,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 8,
+      "max_pair_dot": 0.2988571575113423,
+      "allowed_max_dot": 0.6090796808099284,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 16,
+      "max_pair_dot": 0.34242710454832276,
+      "allowed_max_dot": 0.563695043987551,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 32,
+      "max_pair_dot": 0.49036130960968854,
+      "allowed_max_dot": 0.5183104071651735,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 64,
+      "max_pair_dot": 0.5982067108530018,
+      "allowed_max_dot": 0.47292577034279626,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 128,
+      "max_pair_dot": 0.6506180719856148,
+      "allowed_max_dot": 0.4275411335204188,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 256,
+      "max_pair_dot": 0.720302952465313,
+      "allowed_max_dot": 0.3821564966980414,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 512,
+      "max_pair_dot": 0.720302952465313,
+      "allowed_max_dot": 0.33677185987566416,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 1024,
+      "max_pair_dot": 0.7864141474326916,
+      "allowed_max_dot": 0.2913872230532867,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 2048,
+      "max_pair_dot": 0.7864141474326916,
+      "allowed_max_dot": 0.24600258623090943,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 4096,
+      "max_pair_dot": 0.7864141474326916,
+      "allowed_max_dot": 0.20061794940853206,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 32,
+      "count": 8192,
+      "max_pair_dot": 0.7933439111877888,
+      "allowed_max_dot": 0.15523331258615458,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 8,
+      "max_pair_dot": 0.2640651898004793,
+      "allowed_max_dot": 0.7002039093527411,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 16,
+      "max_pair_dot": 0.2922818971606186,
+      "allowed_max_dot": 0.6699474848044895,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 32,
+      "max_pair_dot": 0.4362146955160119,
+      "allowed_max_dot": 0.639691060256238,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 64,
+      "max_pair_dot": 0.448953197903518,
+      "allowed_max_dot": 0.6094346357079864,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 128,
+      "max_pair_dot": 0.5067844890041712,
+      "allowed_max_dot": 0.5791782111597348,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 256,
+      "max_pair_dot": 0.5719434170559028,
+      "allowed_max_dot": 0.5489217866114833,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 512,
+      "max_pair_dot": 0.6095389316134867,
+      "allowed_max_dot": 0.5186653620632317,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 1024,
+      "max_pair_dot": 0.6095389316134867,
+      "allowed_max_dot": 0.48840893751498005,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 2048,
+      "max_pair_dot": 0.6401971952555823,
+      "allowed_max_dot": 0.45815251296672854,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 4096,
+      "max_pair_dot": 0.6401971952555823,
+      "allowed_max_dot": 0.4278960884184769,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 48,
+      "count": 8192,
+      "max_pair_dot": 0.6867606588284554,
+      "allowed_max_dot": 0.3976396638702254,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 8,
+      "max_pair_dot": 0.16502456074669855,
+      "allowed_max_dot": 0.7470513543703977,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 16,
+      "max_pair_dot": 0.2750519695777177,
+      "allowed_max_dot": 0.724359035959209,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 32,
+      "max_pair_dot": 0.335513892523285,
+      "allowed_max_dot": 0.7016667175480205,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 64,
+      "max_pair_dot": 0.41007363292110344,
+      "allowed_max_dot": 0.6789743991368317,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 128,
+      "max_pair_dot": 0.43630914743835497,
+      "allowed_max_dot": 0.6562820807256431,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 256,
+      "max_pair_dot": 0.4503806208129072,
+      "allowed_max_dot": 0.6335897623144543,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 512,
+      "max_pair_dot": 0.5565810306762113,
+      "allowed_max_dot": 0.6108974439032656,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 1024,
+      "max_pair_dot": 0.5565810306762113,
+      "allowed_max_dot": 0.588205125492077,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 2048,
+      "max_pair_dot": 0.5721414548831925,
+      "allowed_max_dot": 0.5655128070808882,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 4096,
+      "max_pair_dot": 0.5842995776199855,
+      "allowed_max_dot": 0.5428204886696997,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 64,
+      "count": 8192,
+      "max_pair_dot": 0.6230904530579117,
+      "allowed_max_dot": 0.5201281702585109,
+      "passed": false
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 8,
+      "max_pair_dot": 0.30582397470050937,
+      "allowed_max_dot": 0.7757232529147324,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 16,
+      "max_pair_dot": 0.3124417518635674,
+      "allowed_max_dot": 0.7575693981857815,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 32,
+      "max_pair_dot": 0.3124417518635674,
+      "allowed_max_dot": 0.7394155434568306,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 64,
+      "max_pair_dot": 0.4271779817274925,
+      "allowed_max_dot": 0.7212616887278795,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 128,
+      "max_pair_dot": 0.44226476780436713,
+      "allowed_max_dot": 0.7031078339989286,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 256,
+      "max_pair_dot": 0.44226476780436713,
+      "allowed_max_dot": 0.6849539792699777,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 512,
+      "max_pair_dot": 0.47926026929289783,
+      "allowed_max_dot": 0.6668001245410267,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 1024,
+      "max_pair_dot": 0.4962417196048481,
+      "allowed_max_dot": 0.6486462698120757,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 2048,
+      "max_pair_dot": 0.5567449776252757,
+      "allowed_max_dot": 0.6304924150831248,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 4096,
+      "max_pair_dot": 0.5567449776252757,
+      "allowed_max_dot": 0.6123385603541739,
+      "passed": true
+    },
+    {
+      "seed": 20260732,
+      "dimension": 80,
+      "count": 8192,
+      "max_pair_dot": 0.5633251103686249,
+      "allowed_max_dot": 0.594184705625223,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 8,
+      "max_pair_dot": 0.3433912383078878,
+      "allowed_max_dot": 0.6090796808099284,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 16,
+      "max_pair_dot": 0.3764051835644874,
+      "allowed_max_dot": 0.563695043987551,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 32,
+      "max_pair_dot": 0.5311724319349657,
+      "allowed_max_dot": 0.5183104071651735,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 64,
+      "max_pair_dot": 0.6013266988196536,
+      "allowed_max_dot": 0.47292577034279626,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 128,
+      "max_pair_dot": 0.6060876979590262,
+      "allowed_max_dot": 0.4275411335204188,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 256,
+      "max_pair_dot": 0.6787989198805514,
+      "allowed_max_dot": 0.3821564966980414,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 512,
+      "max_pair_dot": 0.6787989198805514,
+      "allowed_max_dot": 0.33677185987566416,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 1024,
+      "max_pair_dot": 0.6885033402818336,
+      "allowed_max_dot": 0.2913872230532867,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 2048,
+      "max_pair_dot": 0.7485594385022504,
+      "allowed_max_dot": 0.24600258623090943,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 4096,
+      "max_pair_dot": 0.7585686338384398,
+      "allowed_max_dot": 0.20061794940853206,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 32,
+      "count": 8192,
+      "max_pair_dot": 0.7728870639454064,
+      "allowed_max_dot": 0.15523331258615458,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 8,
+      "max_pair_dot": 0.2956845856008614,
+      "allowed_max_dot": 0.7002039093527411,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 16,
+      "max_pair_dot": 0.35643186072756916,
+      "allowed_max_dot": 0.6699474848044895,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 32,
+      "max_pair_dot": 0.39724753124016077,
+      "allowed_max_dot": 0.639691060256238,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 64,
+      "max_pair_dot": 0.4774452362811072,
+      "allowed_max_dot": 0.6094346357079864,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 128,
+      "max_pair_dot": 0.5980787877242453,
+      "allowed_max_dot": 0.5791782111597348,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 256,
+      "max_pair_dot": 0.5980787877242453,
+      "allowed_max_dot": 0.5489217866114833,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 512,
+      "max_pair_dot": 0.5980787877242453,
+      "allowed_max_dot": 0.5186653620632317,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 1024,
+      "max_pair_dot": 0.6050385720487294,
+      "allowed_max_dot": 0.48840893751498005,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 2048,
+      "max_pair_dot": 0.6185204158894789,
+      "allowed_max_dot": 0.45815251296672854,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 4096,
+      "max_pair_dot": 0.6865456293141651,
+      "allowed_max_dot": 0.4278960884184769,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 48,
+      "count": 8192,
+      "max_pair_dot": 0.6865456293141651,
+      "allowed_max_dot": 0.3976396638702254,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 8,
+      "max_pair_dot": 0.2376219426505095,
+      "allowed_max_dot": 0.7470513543703977,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 16,
+      "max_pair_dot": 0.2841876693382448,
+      "allowed_max_dot": 0.724359035959209,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 32,
+      "max_pair_dot": 0.35072376282800866,
+      "allowed_max_dot": 0.7016667175480205,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 64,
+      "max_pair_dot": 0.5080574302502158,
+      "allowed_max_dot": 0.6789743991368317,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 128,
+      "max_pair_dot": 0.5080574302502158,
+      "allowed_max_dot": 0.6562820807256431,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 256,
+      "max_pair_dot": 0.5080574302502158,
+      "allowed_max_dot": 0.6335897623144543,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 512,
+      "max_pair_dot": 0.5080574302502158,
+      "allowed_max_dot": 0.6108974439032656,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 1024,
+      "max_pair_dot": 0.5471537865095453,
+      "allowed_max_dot": 0.588205125492077,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 2048,
+      "max_pair_dot": 0.601065864767465,
+      "allowed_max_dot": 0.5655128070808882,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 4096,
+      "max_pair_dot": 0.601065864767465,
+      "allowed_max_dot": 0.5428204886696997,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 64,
+      "count": 8192,
+      "max_pair_dot": 0.6815128265404599,
+      "allowed_max_dot": 0.5201281702585109,
+      "passed": false
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 8,
+      "max_pair_dot": 0.37578703734770896,
+      "allowed_max_dot": 0.7757232529147324,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 16,
+      "max_pair_dot": 0.37578703734770896,
+      "allowed_max_dot": 0.7575693981857815,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 32,
+      "max_pair_dot": 0.37578703734770896,
+      "allowed_max_dot": 0.7394155434568306,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 64,
+      "max_pair_dot": 0.37578703734770896,
+      "allowed_max_dot": 0.7212616887278795,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 128,
+      "max_pair_dot": 0.41952312260867264,
+      "allowed_max_dot": 0.7031078339989286,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 256,
+      "max_pair_dot": 0.45431288585820345,
+      "allowed_max_dot": 0.6849539792699777,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 512,
+      "max_pair_dot": 0.45928260346676775,
+      "allowed_max_dot": 0.6668001245410267,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 1024,
+      "max_pair_dot": 0.4717934001326688,
+      "allowed_max_dot": 0.6486462698120757,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 2048,
+      "max_pair_dot": 0.5272569171973328,
+      "allowed_max_dot": 0.6304924150831248,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 4096,
+      "max_pair_dot": 0.5272569171973328,
+      "allowed_max_dot": 0.6123385603541739,
+      "passed": true
+    },
+    {
+      "seed": 20260733,
+      "dimension": 80,
+      "count": 8192,
+      "max_pair_dot": 0.5703028576998064,
+      "allowed_max_dot": 0.594184705625223,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 8,
+      "max_pair_dot": 0.3583357363020123,
+      "allowed_max_dot": 0.6090796808099284,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 16,
+      "max_pair_dot": 0.41398353174119,
+      "allowed_max_dot": 0.563695043987551,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 32,
+      "max_pair_dot": 0.6540360326199965,
+      "allowed_max_dot": 0.5183104071651735,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 64,
+      "max_pair_dot": 0.6540360326199965,
+      "allowed_max_dot": 0.47292577034279626,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 128,
+      "max_pair_dot": 0.6540360326199965,
+      "allowed_max_dot": 0.4275411335204188,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 256,
+      "max_pair_dot": 0.6540360326199965,
+      "allowed_max_dot": 0.3821564966980414,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 512,
+      "max_pair_dot": 0.7253280578376332,
+      "allowed_max_dot": 0.33677185987566416,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 1024,
+      "max_pair_dot": 0.7253280578376332,
+      "allowed_max_dot": 0.2913872230532867,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 2048,
+      "max_pair_dot": 0.7494160323256782,
+      "allowed_max_dot": 0.24600258623090943,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 4096,
+      "max_pair_dot": 0.7683055718944788,
+      "allowed_max_dot": 0.20061794940853206,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 32,
+      "count": 8192,
+      "max_pair_dot": 0.8090965072799828,
+      "allowed_max_dot": 0.15523331258615458,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 8,
+      "max_pair_dot": 0.31449803445410907,
+      "allowed_max_dot": 0.7002039093527411,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 16,
+      "max_pair_dot": 0.36772265363886625,
+      "allowed_max_dot": 0.6699474848044895,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 32,
+      "max_pair_dot": 0.38544064969570124,
+      "allowed_max_dot": 0.639691060256238,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 64,
+      "max_pair_dot": 0.48737489837598996,
+      "allowed_max_dot": 0.6094346357079864,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 128,
+      "max_pair_dot": 0.48737489837598996,
+      "allowed_max_dot": 0.5791782111597348,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 256,
+      "max_pair_dot": 0.5128803766494044,
+      "allowed_max_dot": 0.5489217866114833,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 512,
+      "max_pair_dot": 0.6156596157653728,
+      "allowed_max_dot": 0.5186653620632317,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 1024,
+      "max_pair_dot": 0.6156596157653728,
+      "allowed_max_dot": 0.48840893751498005,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 2048,
+      "max_pair_dot": 0.6196469976958761,
+      "allowed_max_dot": 0.45815251296672854,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 4096,
+      "max_pair_dot": 0.6790448786695564,
+      "allowed_max_dot": 0.4278960884184769,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 48,
+      "count": 8192,
+      "max_pair_dot": 0.6863288837779051,
+      "allowed_max_dot": 0.3976396638702254,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 8,
+      "max_pair_dot": 0.17414717692347226,
+      "allowed_max_dot": 0.7470513543703977,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 16,
+      "max_pair_dot": 0.28633480398217837,
+      "allowed_max_dot": 0.724359035959209,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 32,
+      "max_pair_dot": 0.33479133785775145,
+      "allowed_max_dot": 0.7016667175480205,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 64,
+      "max_pair_dot": 0.4050372063669846,
+      "allowed_max_dot": 0.6789743991368317,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 128,
+      "max_pair_dot": 0.4499988818678635,
+      "allowed_max_dot": 0.6562820807256431,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 256,
+      "max_pair_dot": 0.47365958419513265,
+      "allowed_max_dot": 0.6335897623144543,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 512,
+      "max_pair_dot": 0.49138937212108325,
+      "allowed_max_dot": 0.6108974439032656,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 1024,
+      "max_pair_dot": 0.5668824809589899,
+      "allowed_max_dot": 0.588205125492077,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 2048,
+      "max_pair_dot": 0.5675904626905318,
+      "allowed_max_dot": 0.5655128070808882,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 4096,
+      "max_pair_dot": 0.6222775740529776,
+      "allowed_max_dot": 0.5428204886696997,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 64,
+      "count": 8192,
+      "max_pair_dot": 0.6222775740529776,
+      "allowed_max_dot": 0.5201281702585109,
+      "passed": false
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 8,
+      "max_pair_dot": 0.2050846265570703,
+      "allowed_max_dot": 0.7757232529147324,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 16,
+      "max_pair_dot": 0.2053143654669342,
+      "allowed_max_dot": 0.7575693981857815,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 32,
+      "max_pair_dot": 0.3427993641976479,
+      "allowed_max_dot": 0.7394155434568306,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 64,
+      "max_pair_dot": 0.38660142796062313,
+      "allowed_max_dot": 0.7212616887278795,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 128,
+      "max_pair_dot": 0.395427539126562,
+      "allowed_max_dot": 0.7031078339989286,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 256,
+      "max_pair_dot": 0.40966229916566926,
+      "allowed_max_dot": 0.6849539792699777,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 512,
+      "max_pair_dot": 0.4502338342903184,
+      "allowed_max_dot": 0.6668001245410267,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 1024,
+      "max_pair_dot": 0.47920064265575163,
+      "allowed_max_dot": 0.6486462698120757,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 2048,
+      "max_pair_dot": 0.5268038951625854,
+      "allowed_max_dot": 0.6304924150831248,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 4096,
+      "max_pair_dot": 0.5719934894922052,
+      "allowed_max_dot": 0.6123385603541739,
+      "passed": true
+    },
+    {
+      "seed": 20260734,
+      "dimension": 80,
+      "count": 8192,
+      "max_pair_dot": 0.5793171115616225,
+      "allowed_max_dot": 0.594184705625223,
+      "passed": true
+    }
+  ],
+  "negative_control": {
+    "name": "duplicate one mean and covariance",
+    "minimum_mean_distance_squared": 0.0,
+    "required_mean_distance_squared_positive": true,
+    "rejected": true
+  },
+  "checks": {
+    "proof_certificate": true,
+    "algorithm_3_invariants": true,
+    "theorem_separation": true,
+    "independent_l2_bounds": true,
+    "calibrated_rate": true,
+    "negative_control_rejected": true
+  }
+}
