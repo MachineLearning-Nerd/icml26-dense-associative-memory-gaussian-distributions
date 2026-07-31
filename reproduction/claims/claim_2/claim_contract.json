@@ -1,0 +1,27 @@
+{
+  "claim_id": 2,
+  "source": {
+    "paper": "arXiv:2509.23162v2",
+    "anchors": ["Thmtheorem1", "alg3", "S6.SS4"]
+  },
+  "statement": "Under Theorem 1's assumptions, Algorithm 3 samples N=floor(sqrt(p/2) exp(d alpha^2/16)) commuting Gaussian measures on the stated Wasserstein sphere and the DAM stores Omega(N) patterns with probability at least 1-p for all sufficiently large d.",
+  "quantifiers": "For every 0<p<1, 0<lambda_min<lambda_max, gamma=lambda_max/lambda_min<sqrt(e), and beta>3 alpha/lambda_min, there exists d0 such that the conclusion holds for every integer d>d0.",
+  "parameters": {
+    "p": 0.1,
+    "lambda_min": 1.0,
+    "lambda_max": 1.1,
+    "beta": 3.0,
+    "theorem_dimensions": [100, 140, 180, 220, 260],
+    "calibration_dimensions": [32, 48, 64, 80],
+    "calibration_sizes": [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192],
+    "seeds": [20260730, 20260731, 20260732, 20260733, 20260734]
+  },
+  "acceptance": [
+    "The reconstructed proof certificate validates every asymptotic implication and locates a finite d0 for the numerical fixture.",
+    "Every full Algorithm 3 sample satisfies sphere, eigenvalue, trace, and commutativity assumptions.",
+    "Every theorem-sized sample through d=260 satisfies the sufficient separation condition.",
+    "An independent exact L2 checker dominates the proof's lower bound.",
+    "The independent geometric calibration has a lower 95% slope bound at least alpha^2/16.",
+    "A duplicated-pattern negative control violates separation."
+  ]
+}
