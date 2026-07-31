@@ -14,6 +14,7 @@ os.environ["MKL_NUM_THREADS"] = str(THREAD_LIMIT)
 from reproduction.claims.claim_1.verifier import verify as verify_claim_1
 from reproduction.claims.claim_2.verifier import verify as verify_claim_2
 from reproduction.claims.claim_3.verifier import verify as verify_claim_3
+from reproduction.claims.claim_4.verifier import verify as verify_claim_4
 
 
 def cpu_affinity_count():
@@ -32,9 +33,10 @@ def main():
     claim_1 = verify_claim_1(output_root / "claim_1")
     claim_2 = verify_claim_2(output_root / "claim_2")
     claim_3 = verify_claim_3(output_root / "claim_3")
+    claim_4 = verify_claim_4(output_root / "claim_4")
     runtime = time.perf_counter() - started
     evidence = {
-        "suite": "cumulative-claims-1-3",
+        "suite": "cumulative-claims-1-4",
         "fixed_command": "uv sync --frozen && uv run python -m reproduction.run",
         "git_sha": command_output(["git", "rev-parse", "HEAD"]),
         "uv": command_output(["uv", "--version"]),
@@ -47,7 +49,7 @@ def main():
         "thread_limit": THREAD_LIMIT,
         "runtime_seconds": runtime,
         "max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
-        "claims": [claim_1, claim_2, claim_3],
+        "claims": [claim_1, claim_2, claim_3, claim_4],
     }
     (output_root / "suite.json").write_text(json.dumps(evidence, indent=2) + "\n")
     print("BEGIN_REPRODUCTION_EVIDENCE")

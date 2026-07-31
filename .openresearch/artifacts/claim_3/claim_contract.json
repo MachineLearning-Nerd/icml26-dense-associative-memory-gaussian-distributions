@@ -1,0 +1,26 @@
+{
+  "claim_id": 3,
+  "source": {
+    "paper": "arXiv:2509.23162v2",
+    "anchors": ["Thmtheorem2", "Thmtheorem3", "Thmcorollary2"]
+  },
+  "statement": "For Theorem 1 Algorithm 3 memories and a query within r=1/sqrt(beta N) of a stored pattern, Theorem 3 bounds one-step retrieval error by 3/sqrt(beta N); substituting N=Omega(exp(d alpha^2/16)) makes the error exponentially small in dimension.",
+  "parameters": {
+    "p": 0.1,
+    "lambda_min": 1.0,
+    "lambda_max": 1.1,
+    "beta": 3.0,
+    "dimensions": [100, 140, 180, 220, 260],
+    "query_radius_fraction": 0.9,
+    "queries_per_memory": 64,
+    "seeds": [20260730, 20260731, 20260732, 20260733, 20260734]
+  },
+  "acceptance": [
+    "A proof certificate derives the dimension exponent -alpha^2/32 from the exact theorem size.",
+    "Every query satisfies W2(query,target)<r and all commuting/spectral assumptions.",
+    "Every log-domain one-step error certificate is below 3/sqrt(beta N).",
+    "The upper 95% confidence bound on observed log-error slope is at most -alpha^2/32.",
+    "A long-double direct checker is bounded by the independent log-domain certificate.",
+    "A sign-reversed Gibbs-weight control violates the theorem bound."
+  ]
+}

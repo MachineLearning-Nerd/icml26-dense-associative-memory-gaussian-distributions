@@ -1,0 +1,77 @@
+[
+  {
+    "direct_log_error": -495.35545831725904,
+    "certificate_log_upper": -495.35545831725904,
+    "passed": true
+  },
+  {
+    "direct_log_error": -521.8945661126129,
+    "certificate_log_upper": -521.8945661126128,
+    "passed": true
+  },
+  {
+    "direct_log_error": -487.55883361997473,
+    "certificate_log_upper": -487.55883361997473,
+    "passed": true
+  },
+  {
+    "direct_log_error": -577.6201870506454,
+    "certificate_log_upper": -577.6201869970187,
+    "passed": true
+  },
+  {
+    "direct_log_error": -558.227341007842,
+    "certificate_log_upper": -558.2273410053313,
+    "passed": true
+  },
+  {
+    "direct_log_error": -524.5264804784719,
+    "certificate_log_upper": -524.5264804784719,
+    "passed": true
+  },
+  {
+    "direct_log_error": -587.0974864037759,
+    "certificate_log_upper": -587.097486382015,
+    "passed": true
+  },
+  {
+    "direct_log_error": -577.108862531721,
+    "certificate_log_upper": -577.1088595238618,
+    "passed": true
+  },
+  {
+    "direct_log_error": -593.8633456290007,
+    "certificate_log_upper": -593.8633409832848,
+    "passed": true
+  },
+  {
+    "direct_log_error": -416.199135300217,
+    "certificate_log_upper": -416.199135300217,
+    "passed": true
+  },
+  {
+    "direct_log_error": -538.5133707164466,
+    "certificate_log_upper": -538.5133707164466,
+    "passed": true
+  },
+  {
+    "direct_log_error": -574.1524327163833,
+    "certificate_log_upper": -574.152426326479,
+    "passed": true
+  },
+  {
+    "direct_log_error": -556.7204108585571,
+    "certificate_log_upper": -556.7204067109076,
+    "passed": true
+  },
+  {
+    "direct_log_error": -520.8764579436593,
+    "certificate_log_upper": -520.8764579436593,
+    "passed": true
+  },
+  {
+    "direct_log_error": -520.8811561735741,
+    "certificate_log_upper": -520.8811561735743,
+    "passed": true
+  }
+]
