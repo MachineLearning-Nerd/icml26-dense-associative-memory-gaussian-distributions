@@ -132,11 +132,11 @@ without evidence and cost about `$0.12`; it is recorded but not used.
 
 ## Reproducibility and lineage
 
-- [Claim 2 capacity branch](https://github.com/MachineLearning-Nerd/icml26-repro-uPHdNikfdo-dense-associative-memory-for-gaussian-distributions/tree/orx/claim-2-calibrated-capacity-scaling)
-- [Claim 3 dimension branch](https://github.com/MachineLearning-Nerd/icml26-repro-uPHdNikfdo-dense-associative-memory-for-gaussian-distributions/tree/orx/claim-3-dimension-decay-retrieval)
-- [Claim 4 full-scale branch](https://github.com/MachineLearning-Nerd/icml26-repro-uPHdNikfdo-dense-associative-memory-for-gaussian-distributions/tree/orx/claim-4-exact-synthetic-phase-separation)
-- [Claim 6 falsification branch](https://github.com/MachineLearning-Nerd/icml26-repro-uPHdNikfdo-dense-associative-memory-for-gaussian-distributions/tree/orx/claim-6-source-consistent-falsification-audit)
-- [Claim 5 winning branch](https://github.com/MachineLearning-Nerd/icml26-repro-uPHdNikfdo-dense-associative-memory-for-gaussian-distributions/tree/orx/claim-5-source-faithful-transition-band-verifier)
+- [Claim 2 capacity branch](https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions/tree/experiment/claim-2-capacity-scaling)
+- [Claim 3 dimension branch](https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions/tree/experiment/claim-3-dimension-decay)
+- [Claim 4 full-scale branch](https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions/tree/experiment/claim-4-temperature-separation)
+- [Claim 6 falsification branch](https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions/tree/audit/claim-6-falsification)
+- [Claim 5 winning branch](https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions/tree/audit/claim-5-text8-transition-band)
 
 Raw JSON, CSVs, claim contracts, source audits, checkers, controls, and
 runtime records are linked from the evaluator-facing claim pages. The
