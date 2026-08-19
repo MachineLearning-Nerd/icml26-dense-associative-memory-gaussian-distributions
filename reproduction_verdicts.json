@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "overall_status": "PARTIAL_CLAIMS_1_TO_5_VERIFIED_CLAIM_6_FALSIFIED",
+  "source_scope": "arXiv:2509.23162v1",
+  "cumulative_evidence": "PASS",
+  "claims": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "VERIFIED_SCOPED",
+    "C5": "VERIFIED_SCOPED",
+    "C6": "FALSIFIED_SCOPED_V1"
+  },
+  "historical_score": {
+    "points": 6,
+    "total": 12,
+    "current_score_claim": false,
+    "forecast": "10/12-12/12"
+  },
+  "publication_allowed": false,
+  "official_author_endorsement": false
+}
+

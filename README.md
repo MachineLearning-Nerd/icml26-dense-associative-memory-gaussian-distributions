@@ -23,6 +23,12 @@ The release bundle verifies five claims and finds one narrow empirical
 claim contradicted by both the new experiments and the paper's own
 archived evidence.
 
+Overall status: `PARTIAL_CLAIMS_1_TO_5_VERIFIED_CLAIM_6_FALSIFIED`.
+This is a scoped v1 audit, not a claim that every theorem or experiment in
+every paper revision has been reproduced. `publication_allowed=false`,
+`score_claim=false`, and `official_author_endorsement=false` until an
+independent evaluator judges the public revision.
+
 | Release result | Meaning |
 | --- | --- |
 | Claims 1–5: **VERIFIED** | Every contract predicate, checker, and required control passed. |
@@ -154,6 +160,10 @@ marimo run notebooks/ddam_reproduction.py
   doi={10.48550/arXiv.2509.23162}
 }
 ```
+
+Machine-readable citation metadata is also available in
+[`CITATION.cff`](CITATION.cff), and the author note is kept separately in
+[`AUTHOR_THANK_YOU.md`](AUTHOR_THANK_YOU.md).
 
 ## Thank you
 

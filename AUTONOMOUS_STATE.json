@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "repository": "MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions",
+  "paper": "Dense associative memory for Gaussian distributions",
+  "source_scope": "arXiv:2509.23162v1",
+  "overall_status": "PARTIAL_CLAIMS_1_TO_5_VERIFIED_CLAIM_6_FALSIFIED",
+  "claim_statuses": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "VERIFIED_SCOPED",
+    "C5": "VERIFIED_SCOPED",
+    "C6": "FALSIFIED_SCOPED_V1"
+  },
+  "current_score_claim": false,
+  "publication_allowed": false,
+  "official_author_endorsement": false,
+  "canonical_identity": {
+    "name": "MachineLearning-Nerd",
+    "email": "MachineLearning-Nerd@users.noreply.github.com"
+  },
+  "recovery_bundle_sha256": "a7f5e31e4562b444b02722271b90d5f421ffcedf1baa8d4677a0b95328a5dcb3",
+  "notes": [
+    "Claims 1-5 are scoped contract verifications.",
+    "Claim 6 is a narrow falsification of the exact arXiv v1 finite statement.",
+    "The current arXiv v2 removes or materially changes Claims 5 and 6."
+  ]
+}
+

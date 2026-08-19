@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "paper_source": "arXiv:2509.23162v1",
+  "overall_status": "PARTIAL_CLAIMS_1_TO_5_VERIFIED_CLAIM_6_FALSIFIED",
+  "required_evidence": [
+    "candidate_space/evidence/claim_1",
+    "candidate_space/evidence/claim_2",
+    "candidate_space/evidence/claim_3",
+    "candidate_space/evidence/claim_4",
+    "candidate_space/evidence/claim_5",
+    "candidate_space/evidence/claim_6",
+    "candidate_space/evidence/cumulative",
+    "candidate_space/pages/current/version-audit.md",
+    "branch-audit.md"
+  ],
+  "controls": {
+    "independent_checkers": true,
+    "negative_controls": true,
+    "source_version_pinned": true,
+    "cumulative_run_recorded": true
+  },
+  "source_hashes": {
+    "v1_pdf": "58b2f5128964af70f66049fc6a115f13bfa4530accc7ed94f282c5f1a8112baa",
+    "v1_source": "a88a9b572b0d3c28b62de7f9419885cd3367d25e8b453bf4ffeba36a68f1f6ee",
+    "v2_source": "a294dd76579191538f6141ce6647db09ac3bf38dc7dde0784ead83ade539fdd8",
+    "ar5iv_html": "12972950e6f86841398b97457bbe3a8ee5c2e8a6cbdf0fd7eb319bbb6ebd1628"
+  }
+}
+

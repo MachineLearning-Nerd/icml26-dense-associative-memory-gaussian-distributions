@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this reproduction or its audit artifacts, please cite this repository and the original paper."
+type: software
+title: "Independent reproduction of Dense associative memory for Gaussian distributions"
+version: "1.0.0"
+date-released: 2026-08-19
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions"
+url: "https://github.com/MachineLearning-Nerd/icml26-dense-associative-memory-gaussian-distributions"
+abstract: "Scoped reproduction and claim audit of Dense associative memory for Gaussian distributions, including five verified claim contracts and a narrow falsification of the exact arXiv v1 non-commuting one-step convergence statement."
+keywords:
+  - dense associative memory
+  - Gaussian distributions
+  - Wasserstein geometry
+  - reproduction
+  - claim audit
+preferred-citation:
+  type: article
+  title: "Dense associative memory for Gaussian distributions"
+  authors:
+    - family-names: Tankala
+      given-names: Chandan
+    - family-names: Balasubramanian
+      given-names: Krishnakumar
+  year: 2025
+  url: "https://arxiv.org/abs/2509.23162"
+
